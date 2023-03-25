@@ -1,0 +1,64 @@
+.nav-toggle{
+	display: none;
+	
+	@include until($tl){
+		display: block;
+	}
+	
+	position: absolute;
+	top:18px;
+	right:18px;
+	width: 45px;
+	height: 23px;
+	margin-top:0px;
+	margin-right:0;
+	-webkit-transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	border:none;
+	z-index: 1000000;
+	background:none !important;
+	cursor: pointer;
+	
+	.icon-bar{
+		display: block;
+		position: absolute;
+		top:0px;
+		left: 0;
+		height: 3px;
+		width: 100%;
+		background: $grey;
+		border-radius: 0;
+		opacity: 1;
+		-webkit-transform: rotate(0deg);
+		-webkit-transition: .25s ease-in-out;
+		margin:0;
+		padding:0;
+		
+		&:nth-child(1) { top: 0px; }
+		&:nth-child(2) { top: 10px; }
+		&:nth-child(3) { top: 20px; }
+		
+	} // end .icon-bar
+	
+	&.active{
+		position: fixed;
+		
+		.icon-bar{
+			
+			&:nth-child(1) {
+				top: 20px;
+				-webkit-transform: rotate(135deg);
+			}
+			
+			&:nth-child(2) {
+				opacity: 0;
+				left: -30px;
+			}
+			
+			&:nth-child(3) {
+				top: 20px;
+				-webkit-transform: rotate(-135deg);
+			}
+		} // end .icon-bar
+	} // end [aria-expanded]
+} // end .nav-toggle

@@ -1,0 +1,37 @@
+/*!
+ * Theme Name: zachcharbel.com v2022
+ * Author: Zach Charbel
+ * Author URI: https://www.zachcharbel.com
+ * Description: Blank wordpress theme template build by Zach Charbel
+ * Version: 1.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: wpframework
+ * Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+
+// mixins and scss helpers
+@import "global/mixins";
+@import "global/wordpress-core";
+@import 'global/colors';
+@import 'global/fonts';
+@import 'global/text-size';
+
+// contains global styling
+@import "parts/global";
+@import "parts/logo";
+@import "parts/some";
+@import "parts/header";
+@import "parts/footer";
+@import "parts/gdpr-banner";
+@import "parts/btn";
+
+// contains page styling
+@import "pages/single";
+
+// contains panel styling
+
+// To add additional scss files
+// create the .scss file within /src/assets/scss
+// then place an "@import "";" tag below

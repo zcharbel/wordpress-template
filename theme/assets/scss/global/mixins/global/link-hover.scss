@@ -1,0 +1,7 @@
+// this removes link decoration and adds it back in on hover of link.
+
+@mixin linkHover() {
+    text-decoration: none; 
+    
+    &:hover{ text-decoration: underline; }
+}

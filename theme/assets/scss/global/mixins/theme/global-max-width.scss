@@ -1,0 +1,13 @@
+@mixin globalMaxWidth(){
+	max-width: 1024px;
+	width: calc(100% - 30px);
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	@include at-least($d){
+		max-width: 1200px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

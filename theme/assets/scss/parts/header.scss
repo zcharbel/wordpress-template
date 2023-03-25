@@ -1,0 +1,64 @@
+ul#menu-primary-menu{
+	
+	
+	@include until($tl){
+		position: fixed;
+		top: 0;
+		left: -100vw;
+		width: 100vw;
+		height: 100%;
+		overflow: scroll;
+		background: $white;
+		z-index: 1000;
+		transition: .25s ease-in-out;
+		
+		&.active{ left: 0vw; }
+		
+	}	
+	
+	@include at-least($tl){
+		@include globalMaxWidth();
+		padding-left: 0;
+		padding-right: 0;
+		display: flex;
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+	
+	li{
+		list-style: none;
+		
+		@include until($tl){
+			margin-top: 20px;
+			text-align: center;
+			
+			&:first-child{
+				margin-top: 42px;
+			}
+			
+		}
+		
+		@include at-least($tl){
+			&:not(:first-child){
+				margin-left: 25px;
+			}
+		}
+		
+		a{
+			text-align: center;
+			@include robotoBold();
+			font-size: 24px;
+			line-height: 30px;
+			color: $grey;
+			text-decoration: none;
+			opacity: .4;
+		}
+		
+		&.active{
+			a{ opacity: 1; }
+		}
+	} // end li
+	
+} // end ul #menu-primary-menu
+
+@import "nav-toggle";

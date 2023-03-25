@@ -1,0 +1,33 @@
+.single-post{
+	
+	h2{ 
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	
+	.content{
+		@include at-least($tlp){
+			max-width: 75%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	
+	.return-to-blog{
+		text-decoration: none;
+		
+		&:first-of-type{ margin-bottom: 20px; }
+		&:last-of-type{ 
+			margin-top: 20px; 
+			margin-bottom: 40px;
+		}
+		
+		a{
+			
+			&:before{
+				content: "< ";
+			}
+			
+		}
+	} // end .return-to-blog
+} // end .single-post

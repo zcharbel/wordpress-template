@@ -1,0 +1,29 @@
+.btn{
+	@include borderRadius(0);
+	//padding: 14px 24px 16px 24px;
+	padding: 10px 25px;
+	font-size: 20px;
+	line-height: 24px;
+	//min-width: 250px;
+	text-align: left;
+	background: $blue;
+	display: inline-block;
+	border: 1px solid $blue;
+	color: $white;
+	transition: .25s;
+	
+	@include until($tp){
+		//width: 100%;
+	}
+	
+	@include at-least($tl){
+		//padding: 29px 24px 28px 24px;
+		//min-width: 334px;
+	}
+	
+	&:hover{
+		background: $white;
+		color: $blue;
+	}
+	
+} // end .btn

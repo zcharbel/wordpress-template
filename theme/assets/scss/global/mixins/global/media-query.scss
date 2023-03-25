@@ -1,0 +1,31 @@
+////////////////////////////////////
+////////// Media Queries ///////////
+////////////////////////////////////
+
+$pp:  320px;
+$pl:  500px;
+$tp:  768px;
+$tn:  900px;
+$tl:  991px;
+$tlp: 1024px;
+$d:   1200px;
+$dl:  1500px;
+$dxl:  1850px;
+
+@mixin at-least($device-width) {
+  @media screen and (min-width: $device-width) {
+	@content 
+  }
+}
+
+@mixin until($device-width) {
+  @media screen and (max-width: $device-width - 1) {
+	@content 
+  }
+}
+
+@mixin between($device-width-min, $device-width-max) {
+  @media (min-width:$device-width-min) and (max-width:$device-width-max - 1) {
+	@content 
+  }
+}

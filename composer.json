@@ -1,0 +1,38 @@
+{
+	"name": "zachcharbel/starterkit",
+	"description": "Easy install for wordpress",
+	"repositories":[
+		{
+		"type":"composer",
+			"url":"https://wpackagist.org"
+		}
+	],
+	"type": "project",
+    "authors": [
+        {
+            "name": "Zach Charbel",
+            "email": "zach@zachcharbel.com"
+        }
+    ],
+	"require": {
+		"johnpbloch/wordpress": "*",
+		"wpackagist-plugin/acf-better-search":"*",
+		"wpackagist-plugin/wordpress-seo":"*",
+		"wpackagist-plugin/wp-smushit":"*",
+		"wpackagist-plugin/acf-content-analysis-for-yoast-seo":"*",
+		"wpackagist-plugin/wordfence":"*",
+		"slowprog/composer-copy-file": "~0.3"
+	},
+	"extra": {
+		"installer-paths": {
+			"wordpress/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+			"wordpress/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"johnpbloch/wordpress-core-installer": true,
+			"composer/installers": true
+		}
+	}
+}

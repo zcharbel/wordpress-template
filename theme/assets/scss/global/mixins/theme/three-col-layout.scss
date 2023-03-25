@@ -1,0 +1,31 @@
+$oneColWidth: calc(100%);
+$twoColWidth: calc(50% - 2.6666%);
+$threeColWidth: calc(33.333% - 2.6666%);
+
+@mixin threeColLayout($itemName){
+	width: 100%;
+	
+	@include at-least($tp){
+		display: grid; 
+		column-gap: 4%;
+		grid-template-columns: $twoColWidth $twoColWidth;
+	}
+	
+	@include at-least($tlp){
+		grid-template-columns: $threeColWidth $threeColWidth $threeColWidth;
+	}
+	
+	.#{$itemName}{
+		margin-top:40px;
+		
+		&:nth-child(1){ margin-top: 0; }
+		
+		@include at-least($tp){
+			&:nth-child(2){ margin-top: 0; }
+		}
+		
+		@include at-least($tlp){
+			&:nth-child(3){ margin-top: 0; }
+		}
+	} // end .item
+}

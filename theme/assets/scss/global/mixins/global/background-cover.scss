@@ -1,0 +1,8 @@
+// sets bg image to cover of element
+@mixin backgroundCover() {
+  background-repeat: no-repeat !important;
+  background-position: 50% 50% !important;
+  background-attachment: scroll !important;
+  background-size: cover !important;
+  overflow: hidden !important;
+}

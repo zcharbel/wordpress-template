@@ -1,0 +1,46 @@
+// social media
+ul#menu-social-media{
+	margin:0;
+	padding:0;
+	display: inline-flex;
+	
+	@include until($tl){
+		@include horizontalCenter(relative);
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+	
+	li{
+		padding:0;
+		margin:0;
+		list-style: none;
+		margin-left:10px;
+		
+		a{
+			background: url(assets/imgs/some-icons.png) no-repeat 0 0 transparent;
+			background-size: 148px 30px;
+			width:30px;
+			height:30px;
+			text-indent:-9999px;
+			display:block;
+			padding: 0;
+		}
+		
+		&:first-child{ margin-left:0; }
+		
+		&.twitter{ 
+			a{ background-position: -30px; }
+		}
+		&.linkedin{ 
+			a{ background-position: -59px; }
+		}
+		&:nth-child(4){ 
+			a{ background-position: -30px; }
+		}
+		&:nth-child(5){ 
+			a{ background-position: -118px; }
+		}
+		
+	}
+	
+} // .some

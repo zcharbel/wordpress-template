@@ -15,7 +15,7 @@ require get_template_directory() . '/_includes/wp/cache-buster.php';
 require get_template_directory() . '/_includes/wp/add-scripts.php';
 
 /* Adds Custom Post Types */
-require get_template_directory() . '/_includes/wp/custom_post_types.php';
+require get_template_directory() . '/_includes/wp/custom-post-types.php';
 
 /* Adds Custom Taxonomies */
 require get_template_directory() . '/_includes/wp/custom_taxonomies.php';

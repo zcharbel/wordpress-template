@@ -22,8 +22,8 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				files: {
-					'<%= themePath %>style.css' : 'theme/assets/scss/main.scss',
-					'<%= themePath %>style-editor.css' : 'theme/assets/scss/wp-editor.scss',
+					'theme/assets/scss/style.css' : 'theme/assets/scss/main.scss',
+					'theme/assets/scss/style-editor.css' : 'theme/assets/scss/wp-editor.scss',
 				}
 			}
 		},
@@ -32,8 +32,10 @@ module.exports = function(grunt) {
 		cssmin: {
 			target: {
 				files: {
-					'production/style.css': ['theme/style.css'],
-					'production/style-editor.css': ['theme/style-editor.css']
+					'theme/style.css': ['theme/assets/scss/style.css'],
+					'theme/style-editor.css': ['theme/assets/scss/style-editor.css'],
+					'<%= themePath %>style.css': ['theme/assets/scss/style.css'],
+					'<%= themePath %>style-editor.css': ['theme/assets/scss/style-editor.css']
 				}
 			}
 		},
@@ -245,7 +247,7 @@ module.exports = function(grunt) {
 	// "release" is for when you want your final files for deployment
 	// "releasecopy" is only used within "release" and you won't use this on its own
 	grunt.registerTask('default', ['serve']);
-	grunt.registerTask('serve', ['clean:removeTheme', 'copy:theme', 'sass', 'copy:acfJson', 'browserSync', 'watch']);
+	grunt.registerTask('serve', ['clean:removeTheme', 'copy:theme', 'sass', 'cssmin', 'copy:acfJson', 'browserSync', 'watch']);
 	grunt.registerTask('release', ['clean:general', 'sass', 'cssmin', 'uglify', 'releasecopy', 'clean:node_mods']);
 	grunt.registerTask('releasecopy', ['copy:videos', 'copy:pdfs', 'copy:vendorjs', 'copy:fonts', 'copy:favicons', 'copy:copyphp']);
 	grunt.registerTask('copyTheme', ['copy:theme', 'copy:installAcf', 'copy:installSvgSupport', 'clean:remove_default_themes', 'sass']);

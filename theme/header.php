@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html <?php language_attributes(); ?> class="no-js">
     <head>
 	    <!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -12,7 +9,7 @@
 		})(window,document,'script','dataLayer','GTM-<?php echo get_field('gtm_id', 'option')?>');</script>
 		<!-- End Google Tag Manager -->
 
-	    <meta charset="<?php bloginfo( 'charset' ); ?>">
+	    <meta content="<?php get_bloginfo('html_type'); ?>" charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 			<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">

@@ -68,7 +68,8 @@ a img.aligncenter {
 .wp-caption {
   background: #fff;
   border: 1px solid #f0f0f0;
-  max-width: 96%; /* Image does not overflow the content area */
+  max-width: 96%;
+  /* Image does not overflow the content area */
   padding: 5px 3px 10px;
   text-align: center;
 }
@@ -112,7 +113,8 @@ a img.aligncenter {
   padding: 0;
   position: absolute !important;
   width: 1px;
-  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
@@ -221,6 +223,14 @@ a {
 a {
   position: relative;
   outline: none !important;
+}
+
+blockquote {
+  display: block;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
 }
 
 #main-content {
@@ -497,71 +507,6 @@ footer .menus ul li a {
 }
 footer .menus ul#menu-footer-menu li:not(:last-child) {
   margin-right: 15px;
-}
-
-.gdpr-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background: #d6ebfc;
-  width: 100%;
-  padding: 15px 0px;
-}
-.gdpr-banner .banner {
-  width: 100%;
-  box-sizing: border-box;
-}
-@media screen and (max-width: 767px) {
-  .gdpr-banner .banner {
-    text-align: center;
-  }
-}
-@media screen and (min-width: 768px) {
-  .gdpr-banner .banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 1023px) {
-  .gdpr-banner .banner {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .gdpr-banner .banner {
-    max-width: 1024px;
-    width: calc(100% - 30px);
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media screen and (min-width: 1024px) and (min-width: 1200px) {
-  .gdpr-banner .banner {
-    max-width: 1200px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .gdpr-banner .banner {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-.gdpr-banner .banner P:first-child {
-  margin-top: 0;
-}
-.gdpr-banner .banner a {
-  font-size: 16px;
-  line-height: 24px;
-}
-@media screen and (max-width: 767px) {
-  .gdpr-banner .banner a {
-    margin-top: 15px;
-  }
 }
 
 .btn {

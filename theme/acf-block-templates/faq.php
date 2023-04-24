@@ -19,23 +19,18 @@ $section = 1;
 // The Loop
 if ($the_query->have_posts()) { ?>
 
-	<div class="faq accordion block">
+	<div class="faq-accordion accordion-list block">
 		
 		<?php while ($the_query->have_posts()) {
-			$the_query->the_post(); ?>
+			$the_query->the_post(); 
 			
-			<div class="accordion-item">
-				<h2 class="accordion-header" id="heading<?php echo '-' . $section; ?>">
-				<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo '-' . $section; ?>" aria-expanded="<?php echo $section == 1 ? 'true' : 'false'; ?>" aria-controls="collapse<?php echo '-' . $section; ?>">
-					<?php the_title(); ?>
-				</button>
-				</h2>
-				<div id="collapse<?php echo '-' . $section; ?>" class="accordion-collapse collapse<?php echo $section == 1 ? ' show' : ''; ?>" aria-labelledby="heading<?php echo '-' . $section; ?>" data-bs-parent="#accordionExample">
-					<div class="accordion-body">
-						<?php the_content(); ?>
-					</div>
-				</div>
-			</div><!-- end .accordion-item -->
+			$question = get_the_title();
+			$answer = get_field('answer', $post->ID); ?>
+			
+			<div class="accordion"><?php echo $question; ?></div>
+			<div class="panel" style="display: none;">
+				<?php echo $answer; ?>
+			</div>
 			
 			<?php $section++;
 		}?>

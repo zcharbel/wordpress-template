@@ -14,7 +14,7 @@
 ------------------------------------------*/
 function register_custom_post_types() {    
     
-    $framworkName = 'wpframework';
+    $framworkName;
     
     require get_template_directory().'/_includes/wp/custom-post-types/faq.php';
     require get_template_directory().'/_includes/wp/custom-post-types/team-members.php';

@@ -2,9 +2,14 @@
 ////////////////////////////////////////////
 // "Role" custom taxonomy (Team Member)
 ////////////////////////////////////////////
+
+$taxName = 'Role';
+$taxSlug = preg_replace('/\s+/', '-', $taxName);
+$taxSlug = strtolower($taxSlug);
+
 $roleLabels = array(
-    'name' => _x( 'Roles', 'roles' ),
-    'singular_name' => _x( 'Role', 'roles' ),
+    'name' => _x( 'Roles', $framworkName ),
+    'singular_name' => _x( 'Role', $framworkName ),
     'search_items' =>  __( 'Search Roles' ),
     'all_items' => __( 'All Roles' ),
     'parent_item' => __( 'Parent Role' ),

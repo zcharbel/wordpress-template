@@ -14,10 +14,9 @@ add_theme_support( 'title-tag' );
 require get_template_directory() . '/_includes/wp/cache-buster.php';
 require get_template_directory() . '/_includes/wp/add-scripts.php';
 
-/* Adds Custom Post Types */
+/* Adds Custom Post Types & Taxonomies*/
+$framworkName = 'wpframework';
 require get_template_directory() . '/_includes/wp/custom-post-types.php';
-
-/* Adds Custom Taxonomies */
 //require get_template_directory() . '/_includes/wp/custom_taxonomies.php';
 
 /* Trims WP excerpt */

@@ -1,22 +1,22 @@
 {
-    "key": "group_61e03eea9822e",
-    "title": "FAQ (CPT)",
+    "key": "group_6446cef543d91",
+    "title": "Content (Block)",
     "fields": [
         {
-            "key": "field_61e03efa94b30",
-            "label": "Answer",
-            "name": "answer",
+            "key": "field_6446cef5a5787",
+            "label": "content",
+            "name": "content",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Enter your content here.",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
@@ -26,22 +26,20 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "faq-cpt"
+                "value": "acf\/content"
             }
         ]
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682363439
+    "modified": 1682362441
 }

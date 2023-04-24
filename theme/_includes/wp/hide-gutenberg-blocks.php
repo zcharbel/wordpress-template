@@ -8,6 +8,7 @@ function usr_allowed_block_types( $allowed_blocks ) {
     'acf/team',
     'acf/accordion',
     'acf/carousel',
+    'acf/content',
     //'core/image',
     'core/block',
     //'core/cover',

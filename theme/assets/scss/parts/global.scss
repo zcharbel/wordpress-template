@@ -35,21 +35,12 @@ h4{ @include h4(); }
 h1,h2,h3,h4,h5,h6{
 	margin-top:0;
 	margin-bottom:0;
-	
-	& + p{ margin-top: 15px; }
-	
-	& + .block { margin-top: 25px; }
-	
 }
 
-p{
-	
-	& + p{ margin-top: 15px; }
-	
+p{	
 	&:last-child{
 		margin-bottom: 0;
 	}
-	
 } // end p
 
 ul{
@@ -73,14 +64,11 @@ strong{
 	//@include robotoBold();
 }
 
-
 #main-content{
-	margin-top: 50px;
 	padding-left: 25px;
 	padding-right: 25px;
 	
 	@include at-least($tl){
-		margin-top: 25px;
 		padding-left: 0;
 		padding-right: 0;
 		@include globalMaxWidth();
@@ -97,7 +85,6 @@ strong{
 	}	
 	
 	& + .wp-block-columns{
-		margin-top: 20px;
 	}
 	
 }

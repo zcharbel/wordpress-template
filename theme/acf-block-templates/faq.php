@@ -5,7 +5,7 @@ $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 global $post;
 
 $postArgs = array(
-	'post_type' =>  'faq',
+	'post_type' =>  'faq-cpt',
 	'posts_per_page' => 9,
 	'paged' => $paged,
 	'post_status' => 'publish'
@@ -60,5 +60,5 @@ if ($the_query->have_posts()) { ?>
 	</div>
 	
 <?php } else {
-	// no posts found
+	// no posts displayed
 } ?>

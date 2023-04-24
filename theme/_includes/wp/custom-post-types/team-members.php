@@ -1,20 +1,25 @@
 <?php 
 //////////////////////
-// FAQs Custom Post type
+// Team Member Custom Post type
 //////////////////////
+
+$cptName = 'Team Member';
+$cptSlug = preg_replace('/\s+/', '-', $cptName);
+$cptSlug = strtolower($cptSlug);
+
 $teamMemberLabels = array(
-    'name' => _x( 'Team Members', 'Post Type General Name', 'wpframework' ),
-    'singular_name' => _x( 'Team Member', 'Post Type Singular Name', 'wpframework' ),
-    'add_new' => _x( 'Add Team Member', 'wpframework' ),
-    'add_new_item' => _x( 'Add Team Member', 'wpframework' ),
-    'edit_item' => _x( 'Edit Team Member', 'wpframework' ),
-    'new_item' => _x( 'New Team Member', 'wpframework' ),
-    'view_item' => _x( 'View Team Member', 'wpframework' ),
-    'search_items' => _x( 'Search Team Member', 'wpframework' ),
-    'not_found' => _x( 'No Team Members found', 'wpframework' ),
-    'not_found_in_trash' => _x( 'No Team Members found in trash', 'wpframework' ),
-    'parent_item_colon' => _x( 'Parent Team Members:', 'wpframework' ),
-    'menu_name' => _x( 'Team Members', 'wpframework' ),
+    'name' => _x( $cptName . 's', 'Post Type General Name', $framworkName ),
+    'singular_name' => _x( $cptName, 'Post Type Singular Name', $framworkName ),
+    'add_new' => _x( 'Add ' . $cptName, $framworkName ),
+    'add_new_item' => _x( 'Add ' . $cptName, $framworkName ),
+    'edit_item' => _x( 'Edit ' . $cptName, $framworkName ),
+    'new_item' => _x( 'New ' . $cptName, $framworkName ),
+    'view_item' => _x( 'View ' . $cptName, $framworkName ),
+    'search_items' => _x( 'Search ' . $cptName, $framworkName ),
+    'not_found' => _x( 'No ' . $cptName . 's found', $framworkName ),
+    'not_found_in_trash' => _x( 'No ' . $cptName . 's found in trash', $framworkName ),
+    'parent_item_colon' => _x( 'Parent ' . $cptName, $framworkName ),
+    'menu_name' => _x( $cptName . 's', $framworkName ),
 );
 $teamMemberArgs = array(
     'labels' => $teamMemberLabels,
@@ -32,9 +37,9 @@ $teamMemberArgs = array(
     'query_var' => true,
     'can_export' => true,
     'rewrite' => array(
-        'slug'=>'team-member'
+        'slug'=>$cptSlug
     ),
     'capability_type' => 'post'
 );
 
-register_post_type( 'team-member-cpt', $teamMemberArgs );
+register_post_type( $cptSlug . '-cpt', $teamMemberArgs );

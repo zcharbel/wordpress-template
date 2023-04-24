@@ -1,5 +1,5 @@
 /*!
- * Theme Name: zachcharbel.com v2022
+ * Theme Name: base wordpress template
  * Author: Zach Charbel
  * Author URI: https://www.zachcharbel.com
  * Description: Blank wordpress theme template build by Zach Charbel
@@ -29,6 +29,9 @@
 
 // contains page styling
 @import "pages/single";
+
+
+@import "blocks/accordion";
 
 // contains panel styling
 

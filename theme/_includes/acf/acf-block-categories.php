@@ -3,7 +3,7 @@
 function ct_theme_category( $categories ) {
     $custom_block = array(
         'slug'  => 'ct-theme',
-        'title' => __( 'Blank Theme', 'ct-theme' ),
+        'title' => __( 'Custom Theme', 'ct-theme' ),
     );
 
     $categories_sorted = array();

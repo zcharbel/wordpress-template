@@ -18,7 +18,7 @@ require get_template_directory() . '/_includes/wp/add-scripts.php';
 require get_template_directory() . '/_includes/wp/custom-post-types.php';
 
 /* Adds Custom Taxonomies */
-require get_template_directory() . '/_includes/wp/custom_taxonomies.php';
+//require get_template_directory() . '/_includes/wp/custom_taxonomies.php';
 
 /* Trims WP excerpt */
 require get_template_directory() . '/_includes/wp/trim-excerpt.php';
@@ -34,7 +34,7 @@ require get_template_directory() . '/_includes/wp/hide-gutenberg-blocks.php';
 require get_template_directory() . '/_includes/acf/acf-excerpt.php';
 require get_template_directory() . '/_includes/acf/acf-options.php';
 require get_template_directory() . '/_includes/acf/acf-sync.php';
-require get_template_directory() . '/_includes/acf/acf-layout.php';
+//require get_template_directory() . '/_includes/acf/acf-layout.php';
 require get_template_directory() . '/_includes/acf/acf-block-categories.php';
 require get_template_directory() . '/_includes/acf/acf-blocks.php';
 

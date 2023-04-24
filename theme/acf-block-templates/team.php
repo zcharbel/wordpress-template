@@ -1,8 +1,7 @@
 <?php 
 	$args = array(
-		'post_type' => 'client',
+		'post_type' => 'team-member-cpt',
 		'posts_per_page' => -1,
-		'order'   => 'DESC',
 	);
 
  
@@ -12,17 +11,15 @@ $query = new WP_Query( $args );
 // Check that we have query results.
 if ( $query->have_posts() ) { ?>
 
-	<div class="clients block">
+	<div class="block team-members">
 		<?php // Start looping over the query results.
 		while ( $query->have_posts() ) {
  	
 			$query->the_post();
-			global $post;
-			
-			$logo = get_field('logo', $post->ID); ?>
+			global $post; ?>
 		
-			<div class="client">
-				<img src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['alt'] ?>" />
+			<div class="team-members__member">
+				<?php the_title(); ?>
 			</div>
 				
 		<?php } ?>

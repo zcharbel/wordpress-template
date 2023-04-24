@@ -17,30 +17,19 @@ ul#menu-social-media{
 		margin-left:10px;
 		
 		a{
-			background: url(assets/imgs/some-icons.png) no-repeat 0 0 transparent;
-			background-size: 148px 30px;
-			width:30px;
-			height:30px;
+			$elementSize: 30px;
+			width:$elementSize;
+			height:$elementSize;
+			background-size: $elementSize $elementSize !important;
 			text-indent:-9999px;
 			display:block;
 			padding: 0;
-		}
+			
+			&.twitter{ background: url(assets/imgs/icons/twitter.svg); }
+			&.linkedin{ background: url(assets/imgs/icons/linkedin.svg); }
+			
+		} // end a
 		
-		&:first-child{ margin-left:0; }
-		
-		&.twitter{ 
-			a{ background-position: -30px; }
-		}
-		&.linkedin{ 
-			a{ background-position: -59px; }
-		}
-		&:nth-child(4){ 
-			a{ background-position: -30px; }
-		}
-		&:nth-child(5){ 
-			a{ background-position: -118px; }
-		}
-		
-	}
+	} // end li
 	
-} // .some
+} // end .some

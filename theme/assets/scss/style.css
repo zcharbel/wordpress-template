@@ -1,5 +1,5 @@
 /*!
- * Theme Name: zachcharbel.com v2022
+ * Theme Name: base wordpress template
  * Author: Zach Charbel
  * Author URI: https://www.zachcharbel.com
  * Description: Blank wordpress theme template build by Zach Charbel
@@ -10,7 +10,7 @@
  * Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 */
 /* WordPress Core */
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Roboto:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Roboto:400,400i,700,700i&display=swap");
 .alignnone {
   margin: 5px 20px 20px 0;
 }
@@ -290,28 +290,18 @@ ul#menu-social-media li {
   margin-left: 10px;
 }
 ul#menu-social-media li a {
-  background: url(assets/imgs/some-icons.png) no-repeat 0 0 transparent;
-  background-size: 148px 30px;
   width: 30px;
   height: 30px;
+  background-size: 30px 30px !important;
   text-indent: -9999px;
   display: block;
   padding: 0;
 }
-ul#menu-social-media li:first-child {
-  margin-left: 0;
+ul#menu-social-media li a.twitter {
+  background: url(assets/imgs/icons/twitter.svg);
 }
-ul#menu-social-media li.twitter a {
-  background-position: -30px;
-}
-ul#menu-social-media li.linkedin a {
-  background-position: -59px;
-}
-ul#menu-social-media li:nth-child(4) a {
-  background-position: -30px;
-}
-ul#menu-social-media li:nth-child(5) a {
-  background-position: -118px;
+ul#menu-social-media li a.linkedin {
+  background: url(assets/imgs/icons/linkedin.svg);
 }
 
 @media screen and (max-width: 990px) {
@@ -595,29 +585,27 @@ footer .menus ul#menu-footer-menu li:not(:last-child) {
   color: #a2c9e8;
 }
 
-.single-post h2 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+.accordion-list .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  display: block;
 }
-@media screen and (min-width: 1024px) {
-  .single-post .content {
-    max-width: 75%;
-    display: block;
-    margin: 0 auto;
-  }
+.accordion-list .accordion .panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
 }
-.single-post .return-to-blog {
-  text-decoration: none;
-}
-.single-post .return-to-blog:first-of-type {
-  margin-bottom: 20px;
-}
-.single-post .return-to-blog:last-of-type {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-.single-post .return-to-blog a:before {
-  content: "< ";
+.accordion-list .accordion.active, .accordion-list .accordion:hover {
+  background-color: #ccc;
 }
 
 /*# sourceMappingURL=style.css.map */

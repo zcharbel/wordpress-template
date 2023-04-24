@@ -1,6 +1,6 @@
 		</div>
 		<!-- End Main Content Container -->
-
+		
 		<footer>
 			
 			<div class="menus">
@@ -12,16 +12,7 @@
 			
 		</footer>
 		
-		<div class="gdpr-banner">
-			<div class="banner">
-				<div class="text">
-					<?php the_field('gdpr_text', 'option')?>
-				</div>
-				<a href="#" class="btn">Close Banner</a>
-			</div>
-		</div>
-
 		<?php wp_footer(); ?>
-
-    </body>
-</html>
+		
+	</body>
+</html

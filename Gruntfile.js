@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 	
 	// "themeName" is set to what you want your theme folder to be named 
 	// within "wp-content" > "themes" folder
-	themeName = 'wordpress base theme';
+	themeName = 'wordpressbasetheme';
 	
 	// "contentPath" sets where the "plugins", "media", "themes" and more is housed.
 	contentPath = 'wordpress/wp-content/';
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 	themePath = '<%= contentPath %>/themes/<%= themeName %>/';
 	
 	// "BrowserSyncLocalUrl" is used to update the proxy url in the browser sync function
-	browserSyncLocalUrl = 'zachcharbel.lan:8888'
+	browserSyncLocalUrl = 'wordpresstemplate.lan:8888'
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -33,9 +33,7 @@ module.exports = function(grunt) {
 			target: {
 				files: {
 					'theme/style.css': ['theme/assets/scss/style.css'],
-					'theme/style-editor.css': ['theme/assets/scss/style-editor.css'],
-					'<%= themePath %>style.css': ['theme/assets/scss/style.css'],
-					'<%= themePath %>style-editor.css': ['theme/assets/scss/style-editor.css']
+					'theme/style-editor.css': ['theme/assets/scss/style-editor.css']
 				}
 			}
 		},
@@ -43,7 +41,7 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target: {
 				files: {
-					'production/assets/js/main.min.js' : ['theme/assets/js/main.js']
+					'theme/assets/js/main.min.js' : ['theme/assets/js/main.js']
 				}
 			}
 		},
@@ -247,7 +245,7 @@ module.exports = function(grunt) {
 	// "release" is for when you want your final files for deployment
 	// "releasecopy" is only used within "release" and you won't use this on its own
 	grunt.registerTask('default', ['serve']);
-	grunt.registerTask('serve', ['clean:removeTheme', 'copy:theme', 'sass', 'cssmin', 'copy:acfJson', 'browserSync', 'watch']);
+	grunt.registerTask('serve', ['clean:removeTheme', 'copy:theme', 'sass', 'copy:acfJson', 'browserSync', 'watch']);
 	grunt.registerTask('release', ['clean:general', 'sass', 'cssmin', 'uglify', 'releasecopy', 'clean:node_mods']);
 	grunt.registerTask('releasecopy', ['copy:videos', 'copy:pdfs', 'copy:vendorjs', 'copy:fonts', 'copy:favicons', 'copy:copyphp']);
 	grunt.registerTask('copyTheme', ['copy:theme', 'copy:installAcf', 'copy:installSvgSupport', 'clean:remove_default_themes', 'sass']);

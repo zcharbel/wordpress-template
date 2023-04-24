@@ -1,12 +1,10 @@
 <?php 
-//////////////////////
-// FAQs Custom Post type
-//////////////////////
-$cptName = 'FAQ';
+
+$cptName = 'CPT Name Goes Here';
 $cptSlug = preg_replace('/\s+/', '-', $cptName);
 $cptSlug = strtolower($cptSlug);
 
-$faqsLabels = array(
+$cptTemplateLabels = array(
     'name' => _x( $cptName . 's', 'Post Type General Name', $framworkName ),
     'singular_name' => _x( $cptName, 'Post Type Singular Name', $framworkName ),
     'add_new' => _x( 'Add ' . $cptName, $framworkName ),
@@ -20,8 +18,8 @@ $faqsLabels = array(
     'parent_item_colon' => _x( 'Parent ' . $cptName, $framworkName ),
     'menu_name' => _x( $cptName . 's', $framworkName ),
 );
-$faqsArgs = array(
-    'labels' => $faqsLabels,
+$cptTemplateArgs = array(
+    'labels' => $cptTemplateLabels,
     'hierarchical' => true,
     'supports' => array( 'title' ),
     'public' => true,
@@ -31,7 +29,7 @@ $faqsArgs = array(
     'show_in_nav_menus' => true,
     'publicly_queryable' => true,
     'exclude_from_search' => false,
-    'has_archive' => true,
+    'has_archive' => false,
     'menu_icon' => 'dashicons-id',
     'query_var' => true,
     'can_export' => true,
@@ -41,4 +39,4 @@ $faqsArgs = array(
     'capability_type' => 'post'
 );
 
-register_post_type( $cptSlug . '-cpt', $faqsArgs );
+register_post_type( $cptSlug . '-cpt', $cptTemplateArgs );

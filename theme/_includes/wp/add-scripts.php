@@ -5,14 +5,19 @@ function load_scripts(){
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	
 	// removes default jquery and adds in jquery version
-	if (!is_admin()) {
+	//if (!is_admin()) {
 		wp_deregister_script('jquery');
 		wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), null, false);
-	}
+	//}
 	
 	// adds aos animation scroll library
 	//wp_enqueue_style( 'aoscss', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), null, false );
 	//wp_enqueue_script( 'aosjs', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array( 'jquery' ), null, false );
+	
+	// adds slick carousel
+	wp_enqueue_style( 'slickcss', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, false );
+	wp_enqueue_script( 'slickjs', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), null, false );
+
 	
     //wp_enqueue_script( 'bootstrapjs','https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), null, false );
 
@@ -20,11 +25,14 @@ function load_scripts(){
 	//wp_enqueue_script( 'scrollmagicind', get_template_directory_uri() . '/assets/js/vendor/debug.addIndicators.js', array( 'jquery' ), null, false );
 	//wp_enqueue_script( 'scrollmagic', get_template_directory_uri() . '/assets/js/vendor/jquery.ScrollMagic.js', array( 'jquery' ), null, false );
 
-    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), null, false );
+    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', null, false );
 
 }
 
-// loads scripts on website
+// loads scripts in WP Admin
+add_action( 'admin_enqueue_scripts', 'load_scripts');
+
+// loads scripts on front end of website
 add_action( 'wp_enqueue_scripts', 'load_scripts', 999 );
 
 add_filter( 'script_loader_tag', 'wsds_defer_scripts', 10, 3);
@@ -36,6 +44,7 @@ function wsds_defer_scripts( $tag, $handle, $src ) {
 		//'aosjs',
 		//'scrollmagic',
 		//'scrollmagicind',
+		'slickjs',
 		'main-js'
 	);
 

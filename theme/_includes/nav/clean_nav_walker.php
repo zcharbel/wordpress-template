@@ -38,6 +38,7 @@ class Clean_Nav_Walker extends Walker_Nav_Menu {
         $atts['target'] = ! empty( $item->target )     ? $item->target     : '';
         $atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
         $atts['href']   = ! empty( $item->url )        ? $item->url        : '';
+        $atts['class']   = ! empty( get_field('social_media_icon', $item) )        ? get_field('social_media_icon', $item)        : '';
 
         $atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 

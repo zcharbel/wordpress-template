@@ -13,27 +13,11 @@
 
 // mixins and scss helpers
 @import "global/mixins";
+@import "global/reset";
 @import "global/wordpress-core";
 @import "global/wordpress-reset";
-@import 'global/colors';
-@import 'global/fonts';
-@import 'global/text-size';
 
-// contains global styling
-@import "parts/global";
-@import "parts/logo";
-@import "parts/some";
-@import "parts/header";
-@import "parts/footer";
-@import "parts/btn";
-
-// contains page styling
-@import "pages/single";
-
-
-@import "blocks/accordion";
-
-// contains panel styling
+@import "compile";
 
 // To add additional scss files
 // create the .scss file within /src/assets/scss

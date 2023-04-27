@@ -1,4 +1,13 @@
-@import "main";
+@import "global/mixins";
+@import "global/reset";
+
+p,
+blockquote {
+	display: block;
+	margin: 0 auto; 
+}
+
+@import "compile";
 //@import 'vendor/bootstrap/bootstrap-grid';
 
 body{

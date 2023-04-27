@@ -10,14 +10,11 @@ if( have_rows('accordion') ): ?>
 
 		// vars
 		$title = get_sub_field('card_title');
-		$content = get_sub_field('card_content');?>
-
-		<div class="accordion"><?php echo $title; ?></div>
-		<div class="panel" style="display: none;">
-			<?php echo $content; ?>
-		</div>
-	<?php
+		$content = get_sub_field('card_content');
+		
+		require get_template_directory().'/_partials/blocks/accordion-content.php'; 
 		$section++;
+		
 	endwhile; ?>
 	</div>
 

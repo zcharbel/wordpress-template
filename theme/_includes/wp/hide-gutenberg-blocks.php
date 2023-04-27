@@ -6,7 +6,9 @@ function usr_allowed_block_types( $allowed_blocks ) {
   return array(
     'acf/faq',
     'acf/team',
+    'acf/blog',
     'acf/accordion',
+    'acf/image',
     'acf/carousel',
     'acf/content',
     //'core/image',

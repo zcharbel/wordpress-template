@@ -1,8 +1,13 @@
 <?php
-
-function load_scripts(){
+function themeslug_enqueue_style(){
 	/** Adds style.css **/
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+}
+
+// loads scripts on front end of website
+add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_style', false );
+
+function load_scripts(){
 	
 	// removes default jquery and adds in jquery version
 	//if (!is_admin()) {

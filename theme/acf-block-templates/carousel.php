@@ -7,7 +7,7 @@ $carouselSlide = 0;
 
 if( have_rows('carousel') ): ?>
 	
-	<div class="carousel">
+	<div class="block block-carousel">
 
 		<?php while( have_rows('carousel') ): the_row();
 
@@ -16,7 +16,9 @@ if( have_rows('carousel') ): ?>
 			$content = get_sub_field('card_content');?>
 
 			<div class="<?php echo $carouselSlide == 0 ? ' active' : '';?>">
-				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+				<?php if( $image ):?>
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+				<?php endif; ?>
 				<?php if( $content ): ?>
 					<div class="content">
 						<?php echo $content; ?>
@@ -32,12 +34,11 @@ if( have_rows('carousel') ): ?>
 	
 	<script type="application/javascript">
 		$( document ).ready(function() {
-			$('.carousel').slick({
+			$('.block-carousel').slick({
 				infinite: true,
 			});
 		});
 	</script>
-
 		
 <?php else :?>
 	<h1>Please add items to the carousel.</h1>

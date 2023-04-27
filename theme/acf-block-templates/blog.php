@@ -17,18 +17,18 @@ $the_query = new WP_Query($postArgs);
 // The Loop
 if ($the_query->have_posts()) { ?>
 
-	<div class="blog block">
+	<div class="block block-blog">
 		
 		<div class="posts">
 			<?php while ($the_query->have_posts()) {
-				$the_query->the_post(); ?>
+				$the_query->the_post(); 
 				
-				<div class="post">
-					<p><?php the_date('Y/m/d');?></p>
-					<h3 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				</div>
+				$title = get_the_title();
+				$permalink = get_the_permalink();
+				$date = get_the_date('Y/m/d');
 				
-			<?php }?>
+				require get_template_directory().'/_partials/post-card.php'; 
+			}?>
 		</div>
 		
 		<?php if( $the_query->max_num_pages > 1 ): ?>

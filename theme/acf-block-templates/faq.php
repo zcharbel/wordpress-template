@@ -24,18 +24,15 @@ if ($the_query->have_posts()) { ?>
 		<?php while ($the_query->have_posts()) {
 			$the_query->the_post(); 
 			
-			$question = get_the_title();
-			$answer = get_field('answer', $post->ID); ?>
+			$title = get_the_title();
+			$content = get_field('answer', $post->ID);
 			
-			<div class="accordion"><?php echo $question; ?></div>
-			<div class="panel" style="display: none;">
-				<?php echo $answer; ?>
-			</div>
+			require get_template_directory().'/_partials/blocks/accordion-content.php'; 
 			
-			<?php $section++;
-		}?>
+			$section++;
+		}
 		
-		<?php if( $the_query->max_num_pages > 1 ): ?>
+		if( $the_query->max_num_pages > 1 ): ?>
 			<div class="pagination">
 				<?php
 					$big = 999999999; // need an unlikely integer

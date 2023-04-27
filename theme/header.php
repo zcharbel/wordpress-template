@@ -24,7 +24,6 @@ if( $gtmTag ): ?>
 <header>
 
     <!-- main navigation -->
-		
 	<?php simple_menu('primary'); ?>
 	
 	<div class="nav-toggle">

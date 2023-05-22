@@ -27,13 +27,13 @@ require get_template_directory() . '/_includes/wp/yoast-position.php';
 
 /* Gutenberg Block Actions */
 require get_template_directory() . '/_includes/wp/gutenberg-css.php';
-require get_template_directory() . '/_includes/wp/hide-gutenberg-blocks.php';
 
 /* Adds in ACF items */
 require get_template_directory() . '/_includes/acf/acf-excerpt.php';
 require get_template_directory() . '/_includes/acf/acf-options.php';
 require get_template_directory() . '/_includes/acf/acf-sync.php';
 //require get_template_directory() . '/_includes/acf/acf-layout.php';
+require get_template_directory() . '/_includes/acf/hide-gutenberg-blocks.php';
 require get_template_directory() . '/_includes/acf/acf-block-categories.php';
 require get_template_directory() . '/_includes/acf/acf-blocks.php';
 
@@ -41,4 +41,7 @@ require get_template_directory() . '/_includes/acf/acf-blocks.php';
 require get_template_directory() . '/_includes/nav/setup.php';
 require get_template_directory() . '/_includes/nav/clean_nav_walker.php';
 require get_template_directory() . '/_includes/nav/simple_menu.php';
-require get_template_directory() . '/_includes/nav/wp-bootstrap-navwalker.php';
+
+
+//require get_template_directory() . '/_includes/wp/trim-excerpt.php';
+require get_template_directory() . '/_includes/wp/add-read-more.php';

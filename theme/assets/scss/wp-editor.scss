@@ -1,20 +1,60 @@
 @import "global/mixins";
-@import "global/reset";
+//@import "global/reset";
 
 p,
-blockquote {
-	display: block;
+blockquote,
+.wp-block {
+	//display: block;
 	margin: 0 auto; 
 }
-
-@import "compile";
-//@import 'vendor/bootstrap/bootstrap-grid';
 
 body{
 	margin: 9px 10px;
 }
 
+.mce-ico {
+	font: normal 20px/1 dashicons;
+}
 
+.mce-caret {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 0;
+	height: 0;
+	vertical-align: top;
+	border-top: 4px solid #b5bcc2;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	content: "";
+}
+
+@import "compile";
+//@import 'vendor/bootstrap/bootstrap-grid';
+
+#tinymce{
+	ul{
+		padding-left: 25px;
+	}
+}
+
+html :where(.wp-block){
+	max-width: 90%;
+	
+	.wp-block{
+		max-width: 100%;
+	}
+	
+}
+
+.mce-content-body{
+	padding: 10px;
+	
+	h1,h2,h3,h4,h5,h6,p,ul,ol{
+		margin-bottom: 10px;
+	}
+	
+}
 
 /*.edit-post-layout__metaboxes:not(:empty){
 		max-width: 500px !important;

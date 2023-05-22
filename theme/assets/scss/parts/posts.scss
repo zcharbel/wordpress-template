@@ -1,0 +1,28 @@
+.posts{
+	display: grid;
+	column-gap: 30px;
+	grid-template-columns: auto;
+	
+	@include at-least($tp){
+		grid-template-columns: auto auto;
+	}
+	
+	@include at-least($d){
+		grid-template-columns: auto auto auto auto;
+	}
+	.post-card{
+
+		.image{
+			width: 100%;
+			height: 260px;
+			
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			
+		}
+		
+	} // end .post-card
+} // end .posts

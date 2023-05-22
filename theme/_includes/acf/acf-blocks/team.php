@@ -14,7 +14,7 @@
 				'description'		=> __('Allows you to add a team section.'),
 				'render_template'	=> 'acf-block-templates/team.php',
 				'category'			=> 'ct-theme',
-				'icon'				=> 'networking',
+				'icon'				=> 'admin-users',
 				'keywords'			=> array( 'team' ),
 			));
 		}

@@ -1,10 +1,11 @@
+a.logo,
 .logo{
-	a{
-		background: url(assets/imgs/logo-black.svg) no-repeat 0 0 transparent;
-		background: 100% auto;
-		width: 147px;
-		height: 18px;
-		display: block;
-		text-indent: -9999px;
-	}
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: 0 0;
+	width: 159px;
+	height: 88px;
+	display: block;
+	text-indent: -9999px;
 } // end .logo

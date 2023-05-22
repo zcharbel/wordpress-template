@@ -143,35 +143,11 @@ module.exports = function(grunt) {
 				src: ['**'],
 				dest: pluginPath + '/advanced-custom-fields-pro'
 			},
-			installSvgSupport: {
-				expand: true,
-				cwd: 'plugins/svg-support',
-				src: ['**'],
-				dest: pluginPath + '/svg-support'
-			},
-			installCache: {
-				expand: true,
-				cwd: 'plugins/wp-super-cache',
-				src: ['**'],
-				dest: pluginPath + '/wp-super-cache'
-			},
 			installGF: {
 				expand: true,
 				cwd: 'plugins/gravityforms',
 				src: ['**'],
 				dest: pluginPath + '/gravityforms'
-			},
-			installWooCommerce: {
-				expand: true,
-				cwd: 'plugins/woocommerce',
-				src: ['**'],
-				dest: pluginPath + '/woocommerce'
-			},
-			installWPForms: {
-				expand: true,
-				cwd: 'plugins/wpforms-lite',
-				src: ['**'],
-				dest: pluginPath + '/wpforms-lite'
 			},
 			theme: {
 				expand: true,
@@ -248,10 +224,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('serve', ['clean:removeTheme', 'copy:theme', 'sass', 'cssmin', 'copy:acfJson', 'browserSync', 'watch']);
 	grunt.registerTask('release', ['clean:general', 'sass', 'cssmin', 'uglify', 'releasecopy', 'clean:node_mods']);
 	grunt.registerTask('releasecopy', ['copy:videos', 'copy:pdfs', 'copy:vendorjs', 'copy:fonts', 'copy:favicons', 'copy:copyphp']);
-	grunt.registerTask('copyTheme', ['copy:theme', 'copy:installAcf', 'copy:installSvgSupport', 'clean:remove_default_themes', 'sass']);
-	grunt.registerTask('installGF', ['copy:installGF']);
-	grunt.registerTask('installWooCommerce', ['copy:installWooCommerce']);
-	grunt.registerTask('installWPForms', ['copy:installWPForms']);
-	grunt.registerTask('installCache', ['copy:installCache']);
+	grunt.registerTask('copyTheme', ['copy:theme', 'copy:installGF', 'copy:installAcf', 'clean:remove_default_themes', 'sass']);
 
 }

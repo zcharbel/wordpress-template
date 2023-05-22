@@ -10,8 +10,10 @@
  */
 
 get_header();
+
     // Start the loop.
     while (have_posts()) : the_post(); ?>
+        
         <div class="content">
             <div class="return-to-blog">
                 <a href="/blog">Return to blog</a>
@@ -23,6 +25,7 @@ get_header();
                 <a href="/blog">Return to blog</a>
             </div>
         </div>
+        
         <?php // End of the loop.
     endwhile; 
     

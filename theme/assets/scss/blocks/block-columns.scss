@@ -1,0 +1,12 @@
+.wp-block-columns{
+    
+    @include until($tl){
+        &:not(:last-child){
+            margin-bottom: 0;
+        }
+    }	
+    
+    & + .wp-block-columns{
+    }
+    
+} // end .wp-block-columns

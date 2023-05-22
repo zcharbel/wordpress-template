@@ -20,8 +20,7 @@ body{
 	margin: 0;
 	padding: 0;	
 	@include latoBook();
-	font-size: 16px;
-	line-height: 24px;
+	@include para();
 	color: $grey;
 }
 
@@ -31,6 +30,8 @@ h1{ @include h1(); }
 h2{ @include h2(); }
 h3{ @include h3(); }
 h4{ @include h4(); }
+h5{ @include h5(); }
+h6{ @include h6(); }
 
 h1,h2,h3,h4,h5,h6{
 	margin-top:0;
@@ -44,8 +45,10 @@ p{
 } // end p
 
 ul{
-	padding: 0;
-	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 a{
@@ -62,29 +65,4 @@ a{
 
 strong{
 	//@include robotoBold();
-}
-
-#main-content{
-	padding-left: 25px;
-	padding-right: 25px;
-	
-	@include at-least($tl){
-		padding-left: 0;
-		padding-right: 0;
-		@include globalMaxWidth();
-	}
-
-} // end #wrapper
-
-.wp-block-columns{
-	
-	@include until($tl){
-		&:not(:last-child){
-			margin-bottom: 0;
-		}
-	}	
-	
-	& + .wp-block-columns{
-	}
-	
 }

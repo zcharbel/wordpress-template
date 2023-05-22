@@ -14,7 +14,7 @@
 				'description'		=> __('Allows you to add a image section.'),
 				'render_template'	=> 'acf-block-templates/image.php',
 				'category'			=> 'ct-theme',
-				'icon'				=> 'format-aside',
+				'icon'				=> 'format-image',
 				'keywords'			=> array( 'image' ),
 			));
 		}

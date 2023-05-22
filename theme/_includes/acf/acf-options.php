@@ -11,22 +11,16 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 	
-		acf_add_options_sub_page([
-			'page_title' 	=> 'GPDR Info',
-			'menu_title' 	=> 'GPDR Info',
-			'parent_slug'	=> 'general_information',
-		]);
-		
-		acf_add_options_sub_page([
-			'page_title' 	=> 'Company Info',
-			'menu_title' 	=> 'Company Info',
-			'parent_slug'	=> 'general_information',
-		]);
-		
-		acf_add_options_sub_page([
-			'page_title' 	=> 'Google Analytics',
-			'menu_title' 	=> 'Google Analytics',
-			'parent_slug'	=> 'general_information',
-		]);
+	acf_add_options_sub_page([
+		'page_title' 	=> 'Google Analytics',
+		'menu_title' 	=> 'Google Analytics',
+		'parent_slug'	=> 'general_information',
+	]);
+	
+	acf_add_options_sub_page([
+		'page_title' 	=> 'Footer',
+		'menu_title' 	=> 'Footer',
+		'parent_slug'	=> 'general_information',
+	]);
 
 }

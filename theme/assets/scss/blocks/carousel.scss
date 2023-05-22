@@ -1,0 +1,39 @@
+.block-carousel{
+    
+    .slick-arrow{
+        @include verticalCenter(absolute);
+        z-index: 10;
+        cursor: pointer;
+        
+        &.slick-next,
+        &.slick-prev{}
+        
+        &.slick-next{ right: 20px; }
+        &.slick-prev{ left: 20px; }
+    } // end .slick-arrow
+    
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        li{
+            &:not(:last-child){ margin-right: 10px; }
+            
+            button{ cursor: pointer !important; }
+            
+        } // end li
+    } // end .slick-dots
+    
+    .slick-slide{
+        img{
+            position: relative;
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+        }
+    } // end .slick-slide
+    
+} // end .block-carousel

@@ -1,5 +1,27 @@
 // merges all files used in both front-end and wp admin parts of sites
-@import "globals";
-@import "parts";
-@import "pages";
-@import "blocks";
+
+// contains all global scss files
+@import 'global/colors';
+@import 'global/fonts';
+@import 'global/text-size';
+
+// contains global scss files
+@import "parts/global";
+@import "parts/logo";
+@import "parts/menus/some";
+@import "parts/header";
+@import "parts/footer";
+@import "parts/main-content";
+@import "parts/btn";
+@import "parts/posts";
+@import "parts/gravity-forms";
+
+// contains all page scss files
+@import "pages/single";
+
+// contains ll block scss files
+@import "blocks/block-columns";
+@import "blocks/accordion";
+@import "blocks/image";
+@import "blocks/carousel";
+@import "blocks/video";

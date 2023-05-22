@@ -17,7 +17,7 @@ if( have_rows('carousel') ): ?>
 
 			<div class="<?php echo $carouselSlide == 0 ? ' active' : '';?>">
 				<?php if( $image ):?>
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					<img src="<?php echo $image['url']; ?>" <?php echo $image['alt'] ? 'alt="'.$image['alt'].'"' : '';?>>
 				<?php endif; ?>
 				<?php if( $content ): ?>
 					<div class="content">
@@ -29,13 +29,13 @@ if( have_rows('carousel') ): ?>
 		<?php
 			$carouselSlide++;
 		endwhile; ?>
-
 	</div>
 	
 	<script type="application/javascript">
 		$( document ).ready(function() {
 			$('.block-carousel').slick({
 				infinite: true,
+				dots: true
 			});
 		});
 	</script>

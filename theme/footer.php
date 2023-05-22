@@ -8,7 +8,9 @@
 				simple_menu('social-media'); ?>
 			</div>
 			
-			<p class="copyright">Zach Charbel &copy; 2011-<?php echo date('Y'); ?></p>
+			<?php $copyrightText = get_field('footer_copyright_text', 'option')?>
+			
+			<p class="copyright"><?php echo $copyrightText ? $copyrightText : '';?> &copy; 2011-<?php echo date('Y'); ?></p>
 			
 		</footer>
 		

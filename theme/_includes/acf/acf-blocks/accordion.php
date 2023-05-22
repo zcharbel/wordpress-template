@@ -14,7 +14,7 @@
 				'description'		=> __('Allows you to add a accordion section.'),
 				'render_template'	=> 'acf-block-templates/accordion.php',
 				'category'			=> 'ct-theme',
-				'icon'				=> 'list-view',
+				'icon'				=> 'align-none',
 				'keywords'			=> array( 'accordion' ),
 			));
 		}

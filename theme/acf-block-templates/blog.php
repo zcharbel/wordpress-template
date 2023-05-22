@@ -6,7 +6,7 @@ global $post;
 
 $postArgs = array(
 	'post_type' =>  'post',
-	'posts_per_page' => 9,
+	'posts_per_page' => 12,
 	'paged' => $paged,
 	'post_status' => 'publish'
 );
@@ -17,15 +17,15 @@ $the_query = new WP_Query($postArgs);
 // The Loop
 if ($the_query->have_posts()) { ?>
 
-	<div class="block block-blog">
+	<div class="block block__blog">
 		
 		<div class="posts">
 			<?php while ($the_query->have_posts()) {
 				$the_query->the_post(); 
 				
-				$title = get_the_title();
-				$permalink = get_the_permalink();
 				$date = get_the_date('Y/m/d');
+				$postThumbnail = get_the_post_thumbnail_url();
+				$postExcerpt = get_the_excerpt();
 				
 				require get_template_directory().'/_partials/post-card.php'; 
 			}?>

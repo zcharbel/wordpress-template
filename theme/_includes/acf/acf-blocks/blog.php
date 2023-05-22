@@ -14,7 +14,7 @@
 				'description'		=> __('Allows you to add a blog section.'),
 				'render_template'	=> 'acf-block-templates/blog.php',
 				'category'			=> 'ct-theme',
-				'icon'				=> 'format-aside',
+				'icon'				=> 'columns',
 				'keywords'			=> array( 'blog' ),
 			));
 		}

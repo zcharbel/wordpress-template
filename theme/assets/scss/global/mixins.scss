@@ -4,7 +4,7 @@
 @import 'mixins/global/background-cover';
 @import 'mixins/global/border-radius';
 @import 'mixins/global/center-element';
-@import 'mixins/global/dropshadow';
+@import 'mixins/global/boxshadow';
 @import 'mixins/global/media-query';
 @import 'mixins/global/transform';
 @import 'mixins/global/link-hover';
@@ -14,5 +14,3 @@
 ////////////////////////
 
 @import 'mixins/theme/global-max-width';
-//@import 'mixins/theme/three-col-layout';
-//@import 'mixins/theme/four-col-layout';

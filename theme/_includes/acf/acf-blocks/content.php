@@ -14,7 +14,7 @@
 				'description'		=> __('Allows you to add a content section.'),
 				'render_template'	=> 'acf-block-templates/content.php',
 				'category'			=> 'ct-theme',
-				'icon'				=> 'format-aside',
+				'icon'				=> 'align-left',
 				'keywords'			=> array( 'content' ),
 			));
 		}

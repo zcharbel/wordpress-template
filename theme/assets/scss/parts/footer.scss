@@ -9,7 +9,7 @@ footer{
 	}
 	
 	@include at-least($tlp){
-		@include globalMaxWidth();
+		//@include globalMaxWidth();
 	}
 	
 	p{

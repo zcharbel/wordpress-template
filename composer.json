@@ -22,8 +22,11 @@
 		"wpackagist-plugin/acf-content-analysis-for-yoast-seo":"*",
 		"wpackagist-plugin/wordfence":"*",
 		"wpackagist-plugin/simple-custom-post-order":"*",
+		"wpackagist-plugin/fakerpress":"*",
 		"wpackagist-plugin/wp-super-cache":"*",
-		"slowprog/composer-copy-file": "~0.3"
+		"wpackagist-plugin/svg-support":"*",
+		"slowprog/composer-copy-file": "~0.3",
+		//"wpackagist-plugin/woocommerce":"*"
 	},
 	"extra": {
 		"installer-paths": {

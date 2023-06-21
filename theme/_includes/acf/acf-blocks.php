@@ -1,10 +1,10 @@
 <?php
-	//require get_template_directory() . '/_includes/acf/acf-blocks/blog.php';
-	require get_template_directory() . '/_includes/acf/acf-blocks/faq.php';
-	require get_template_directory() . '/_includes/acf/acf-blocks/team.php';
-	require get_template_directory() . '/_includes/acf/acf-blocks/accordion.php';
-	require get_template_directory() . '/_includes/acf/acf-blocks/carousel.php';
-	require get_template_directory() . '/_includes/acf/acf-blocks/blog.php';
-	require get_template_directory() . '/_includes/acf/acf-blocks/content.php';
-	require get_template_directory() . '/_includes/acf/acf-blocks/image.php';
-	require get_template_directory() . '/_includes/acf/acf-blocks/video.php';
+	// Adds in custom ACF Blocks
+	// for use in this custom theme
+	
+	$dir    = get_template_directory() . '/_includes/acf/acf-blocks';
+	$files = array_diff(scandir($dir), array('..', '.'));
+	
+	foreach ($files as &$file) {
+		require get_template_directory().'/_includes/acf/acf-blocks/'.$file;
+	}

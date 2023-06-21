@@ -25,8 +25,7 @@
 		"wpackagist-plugin/fakerpress":"*",
 		"wpackagist-plugin/wp-super-cache":"*",
 		"wpackagist-plugin/svg-support":"*",
-		"slowprog/composer-copy-file": "~0.3",
-		//"wpackagist-plugin/woocommerce":"*"
+		"slowprog/composer-copy-file": "~0.3"
 	},
 	"extra": {
 		"installer-paths": {

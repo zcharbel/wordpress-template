@@ -1,17 +1,10 @@
 <?php
 
-add_filter( 'allowed_block_types_all', 'usr_allowed_block_types' );
+add_filter( 'allowed_block_types_all', 'usr_allowed_block_types', 25, 2 );
 
 function usr_allowed_block_types( $allowed_blocks ) {
-  return array(
-    'acf/video',
-    'acf/faq',
-    'acf/team',
-    'acf/blog',
-    'acf/accordion',
-    'acf/image',
-    'acf/carousel',
-    'acf/content',
+  
+  $allowed_blocks = array(
     //'core/image',
     'core/block',
     //'core/cover',
@@ -30,5 +23,17 @@ function usr_allowed_block_types( $allowed_blocks ) {
     //'core/custom-html',
     'core/shortcode'
   );
+  
+  // this adds in all custom ACF blocks
+  // for use on posts and pages
+  $dir    = get_template_directory() . '/_includes/acf/acf-blocks';
+  $files = array_diff(scandir($dir), array('..', '.'));
+  
+  foreach ($files as &$file) {
+    $file =str_replace(".php","",$file);
+    array_push($allowed_blocks, "acf/".$file);
+  };
+  
+  return $allowed_blocks;
 
 }

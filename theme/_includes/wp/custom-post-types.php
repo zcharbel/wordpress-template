@@ -14,10 +14,16 @@
 ------------------------------------------*/
 function register_custom_post_types() {    
     
-    $framworkName;
+    // $frameworkName is set in functions.php file
+    global $frameworkName;
     
-    require get_template_directory().'/_includes/wp/custom-post-types/faq.php';
-    require get_template_directory().'/_includes/wp/custom-post-types/team-members.php';
+    $dir    = get_template_directory().'/_includes/wp/custom-post-types';
+    $files = array_diff(scandir($dir), array('..', '.', 'custom-post-type-template.php'));
+    
+    foreach ($files as &$file) {
+        require get_template_directory().'/_includes/wp/custom-post-types/'.$file;
+    }
+    
 }
 add_action( 'init', 'register_custom_post_types' );
 

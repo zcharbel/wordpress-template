@@ -14,10 +14,13 @@ add_theme_support( 'title-tag' );
 require get_template_directory() . '/_includes/wp/cache-buster.php';
 require get_template_directory() . '/_includes/wp/add-scripts.php';
 
+/* Sets $frameworkName variable used in setting
+    custom post types and taxonomies */
+$frameworkName = 'wpframework';
+
 /* Adds Custom Post Types & Taxonomies*/
-$framworkName = 'wpframework';
 require get_template_directory() . '/_includes/wp/custom-post-types.php';
-//require get_template_directory() . '/_includes/wp/custom_taxonomies.php';
+require get_template_directory() . '/_includes/wp/custom-taxonomies.php';
 
 /* Trims WP excerpt */
 require get_template_directory() . '/_includes/wp/trim-excerpt.php';

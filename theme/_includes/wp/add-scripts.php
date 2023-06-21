@@ -15,16 +15,15 @@ function load_scripts(){
 		wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), null, false);
 	//}
 	
-	// adds aos animation scroll library
-	//wp_enqueue_style( 'aoscss', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), null, false );
-	//wp_enqueue_script( 'aosjs', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array( 'jquery' ), null, false );
+	if (!is_admin()) {
+		// adds aos animation scroll library
+		//wp_enqueue_style( 'aoscss', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), null, false );
+		//wp_enqueue_script( 'aosjs', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array( 'jquery' ), null, false );
+	}
 	
 	// adds slick carousel
 	wp_enqueue_style( 'slickcss', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, false );
 	wp_enqueue_script( 'slickjs', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), null, false );
-
-	
-    //wp_enqueue_script( 'bootstrapjs','https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), null, false );
 
     //wp_enqueue_script( 'scrollmagic','//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array( 'jquery' ), null, false );
 	//wp_enqueue_script( 'scrollmagicind', get_template_directory_uri() . '/assets/js/vendor/debug.addIndicators.js', array( 'jquery' ), null, false );

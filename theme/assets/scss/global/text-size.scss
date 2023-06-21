@@ -2,28 +2,37 @@
 //////// Text Sizes /////////
 /////////////////////////////
 
-// $sizeLowPx = minimum font size with px prefix
-// $sizeLow = minimum font size
-// $sizeHight = maximum font size
-// $lHeight = line height
-// $lSpacing = letter spacing
-// copy example below to use
-// scalableFont(16px, 16, 25, 1.3, normal)
-@mixin scalableFont($sizeLowPx, $sizeLow, $sizeHigh, $lHeight, $lSpacing){
-  font-size: calc($sizeLowPx + ($sizeHigh - $sizeLow) * ((100vw - 1280px) / (2000 - 1280)));
-  line-height: $lHeight;
-  letter-spacing: $lSpacing;
-}
-
 // $fSize = font size
 // $lHeight = line height
 // $lSpacing = letter spacing
 // copy example below to use
-// fontSize(16px, 1.3, normal)
+// fontSize(16px, 1.3, .01em/normal);
 @mixin fontSize($fSize, $lHeight, $lSpacing){
-  font-size: $fSize;
-  line-height: $lHeight;
-  letter-spacing: $lSpacing;
+	font-size: $fSize;
+	line-height: $lHeight;
+	letter-spacing: $lSpacing;
+}
+
+// $sizeLow = minimum font size
+// $sizeHigh = maximum font size
+// $lHeight = line height
+// $lSpacing = letter spacing
+// copy example below to use
+// scalableFont(16px, 35px, 16, 25, 1.3, .01em/normal);
+@mixin scalableFont($sizeLow, $sizeHigh, $lHeight, $lSpacing){
+  
+	font-size: #{$sizeLow}px;
+	line-height: $lHeight;
+	letter-spacing: $lSpacing;
+	
+	@include at-least($tp){
+		font-size: calc(#{$sizeLow}px + #{$sizeHigh - $sizeLow} * ((100vw - 768px) / (1920 - 768)));
+	}
+	
+	@include at-least($dxl){
+		font-size: #{$sizeHigh}px;
+	}
+  
 }
 
 @mixin h1(){

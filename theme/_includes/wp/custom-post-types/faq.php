@@ -2,23 +2,25 @@
 //////////////////////
 // FAQs Custom Post type
 //////////////////////
+
+global $frameworkName;
 $cptName = 'FAQ';
 $cptSlug = preg_replace('/\s+/', '-', $cptName);
 $cptSlug = strtolower($cptSlug);
 
 $faqsLabels = array(
-    'name' => _x( $cptName . 's', 'Post Type General Name', $framworkName ),
-    'singular_name' => _x( $cptName, 'Post Type Singular Name', $framworkName ),
-    'add_new' => _x( 'Add ' . $cptName, $framworkName ),
-    'add_new_item' => _x( 'Add ' . $cptName, $framworkName ),
-    'edit_item' => _x( 'Edit ' . $cptName, $framworkName ),
-    'new_item' => _x( 'New ' . $cptName, $framworkName ),
-    'view_item' => _x( 'View ' . $cptName, $framworkName ),
-    'search_items' => _x( 'Search ' . $cptName, $framworkName ),
-    'not_found' => _x( 'No ' . $cptName . 's found', $framworkName ),
-    'not_found_in_trash' => _x( 'No ' . $cptName . 's found in trash', $framworkName ),
-    'parent_item_colon' => _x( 'Parent ' . $cptName, $framworkName ),
-    'menu_name' => _x( $cptName . 's', $framworkName ),
+    'name' => _x( $cptName . 's', 'Post Type General Name', $frameworkName ),
+    'singular_name' => _x( $cptName, 'Post Type Singular Name', $frameworkName ),
+    'add_new' => _x( 'Add ' . $cptName, $frameworkName ),
+    'add_new_item' => _x( 'Add ' . $cptName, $frameworkName ),
+    'edit_item' => _x( 'Edit ' . $cptName, $frameworkName ),
+    'new_item' => _x( 'New ' . $cptName, $frameworkName ),
+    'view_item' => _x( 'View ' . $cptName, $frameworkName ),
+    'search_items' => _x( 'Search ' . $cptName, $frameworkName ),
+    'not_found' => _x( 'No ' . $cptName . 's found', $frameworkName ),
+    'not_found_in_trash' => _x( 'No ' . $cptName . 's found in trash', $frameworkName ),
+    'parent_item_colon' => _x( 'Parent ' . $cptName, $frameworkName ),
+    'menu_name' => _x( $cptName . 's', $frameworkName ),
 );
 $faqsArgs = array(
     'labels' => $faqsLabels,

@@ -12,20 +12,22 @@ $query = new WP_Query( $args );
 if ( $query->have_posts() ) { ?>
 
 	<div class="block block-team-members">
-		<?php // Start looping over the query results.
-		while ( $query->have_posts() ) {
- 	
-			$query->the_post();
-			global $post; 
-			
-			$title = get_the_title();
-			// $content = get_field('answer', $post->ID);?>
-		
-			<div class="team-members__team-member">
-				<?php echo $title ?>
-			</div>
+		<div class="container">
+			<?php // Start looping over the query results.
+			while ( $query->have_posts() ) {
+ 		
+				$query->the_post();
+				global $post; 
 				
-		<?php } ?>
+				$title = get_the_title();
+				// $content = get_field('answer', $post->ID);?>
+			
+				<div class="team-members__team-member">
+					<?php echo $title ?>
+				</div>
+					
+			<?php } ?>
+		</div>
 	</div>
 <?php }
  

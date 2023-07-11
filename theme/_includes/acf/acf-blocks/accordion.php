@@ -1,21 +1,28 @@
 <?php
-	// ct = custom theme
-
+	
 	// accordion block
 	function ct_accordion_block() {
-
+	
 		// check function exists
 		if( function_exists('ct_accordion_block') ) {
-
+			
+			// ct = custom theme
+			global $ctName;
+			
+			$blockName = 'Accordion';
+			$blockNameLC = strtolower($blockName);
+			$blockSlug = preg_replace('/\s+/', '-', $blockNameLC);
+			$icon = 'align-none';
+			
 			// register a portfolio item block
-			acf_register_block(array(
-				'name'				=> 'accordion',
-				'title'				=> __('Accordion'),
-				'description'		=> __('Allows you to add a accordion section.'),
-				'render_template'	=> 'acf-block-templates/accordion.php',
-				'category'			=> 'ct-theme',
-				'icon'				=> 'align-none',
-				'keywords'			=> array( 'accordion' ),
+			acf_register_block_type(array(
+				'name'				=> $blockNameLC,
+				'title'				=> __($blockName),
+				'description'		=> __('Allows you to add a ' . $blockNameLC . ' block.'),
+				'render_template'	=> 'acf-block-templates/' . $blockSlug . '.php',
+				'category'			=> $ctName,
+				'icon'				=> $icon,
+				'keywords'			=> array( $blockNameLC ),
 			));
 		}
 	}

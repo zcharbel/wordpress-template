@@ -1,36 +1,47 @@
-@import "menus/main-menu";
-@import "nav-toggle";
-
 header{
 	position: relative;
 	z-index: 1000;
 	
 	.header__content{
+		@include globalMaxWidth();
 		display: flex;
 		justify-content: space-between;
 		
 		@include until($tl){
-			position: fixed;
-			top: 0;
-			left: -100vw;
-			width: 100vw;
+			//position: fixed;
+			//top: 0;
+			//left: -100vw;
+			//width: 100vw;
+			margin-top: 25px;
 			height: 100%;
-			overflow: scroll;
-			background: $white;
-			z-index: 1000;
-			transition: .25s ease-in-out;
-			
-			&.active{ left: 0vw; }
-			
 		}	
 		
 		@include at-least($tl){
-			//@include globalMaxWidth();
 			padding-left: 0;
 			padding-right: 0;
 			margin-top: 10px;
 			margin-bottom: 30px;
+			align-items: center;
 		}
+		
+		.menu-main-container{
+			@include until($tl){
+				position: fixed;
+				top: 0;
+				left: -100vw;
+				width: 100vw;
+				height: 100vh;
+				background: $white;
+				z-index: 1000;
+				transition: .25s ease-in-out;
+				
+				&.active{ left: 0vw; }
+				
+			}	
+		}
+		
+		@import "menus/main-menu";
+		@import "nav-toggle";
 		
 	} // end .header__content
 } // end header

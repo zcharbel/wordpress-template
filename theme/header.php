@@ -22,7 +22,6 @@ if( $gtmTag ): ?>
 <?php endif; ?>
 
 <header>
-	
 	<div class="header__content">
 		<?php $logo = get_field('co_info_logo', 'option')?>
 		<a href="/" class="logo" style="background-image:url(<?php echo $logo['url']; ?>)">Logo</a>
@@ -34,8 +33,7 @@ if( $gtmTag ): ?>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</div>
-	</div>
-	
+	</div>	
 </header>
 
 <!-- Begin Main Content Container -->

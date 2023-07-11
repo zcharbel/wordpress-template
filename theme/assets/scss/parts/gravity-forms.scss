@@ -1,4 +1,6 @@
 .gform_wrapper{
+	@include globalMaxWidth();
+	margin-top: 50px;
 	
 	.gsection_title,
 	.gfield_label{

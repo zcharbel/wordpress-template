@@ -14,11 +14,11 @@ add_theme_support( 'title-tag' );
 require get_template_directory() . '/_includes/wp/cache-buster.php';
 require get_template_directory() . '/_includes/wp/add-scripts.php';
 
+/* Adds Custom Post Types & Taxonomies*/
+
 /* Sets $frameworkName variable used in setting
     custom post types and taxonomies */
 $frameworkName = 'wpframework';
-
-/* Adds Custom Post Types & Taxonomies*/
 require get_template_directory() . '/_includes/wp/custom-post-types.php';
 require get_template_directory() . '/_includes/wp/custom-taxonomies.php';
 
@@ -32,6 +32,10 @@ require get_template_directory() . '/_includes/wp/yoast-position.php';
 require get_template_directory() . '/_includes/wp/gutenberg-css.php';
 
 /* Adds in ACF items */
+
+/* Sets $frameworkName variable used in setting
+    custom post types and taxonomies */
+$ctName = 'ct-theme';
 require get_template_directory() . '/_includes/acf/acf-excerpt.php';
 require get_template_directory() . '/_includes/acf/acf-options.php';
 require get_template_directory() . '/_includes/acf/acf-sync.php';

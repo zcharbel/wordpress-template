@@ -38,6 +38,11 @@ body{
 	}
 }
 
+.is-root-container{ 
+	margin-top: 25px; 
+	margin-bottom: 25px;
+}
+
 html :where(.wp-block){
 	max-width: 90%;
 	

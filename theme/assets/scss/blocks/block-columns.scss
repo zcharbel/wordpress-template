@@ -1,4 +1,6 @@
 .wp-block-columns{
+    @include horizontalCenter(relative);
+    @include globalMaxWidth();
     
     @include until($tl){
         &:not(:last-child){
@@ -10,3 +12,9 @@
     }
     
 } // end .wp-block-columns
+
+html :where(.wp-block){
+    .wp-block-columns{
+        display: none;
+    } // end .block
+}

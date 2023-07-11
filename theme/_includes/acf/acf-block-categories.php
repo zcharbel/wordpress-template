@@ -1,9 +1,12 @@
 <?php
 
 function ct_theme_category( $categories ) {
+    
+    global $ctName;
+    
     $custom_block = array(
-        'slug'  => 'ct-theme',
-        'title' => __( 'Custom Theme', 'ct-theme' ),
+        'slug'  => $ctName,
+        'title' => __( 'Custom Theme', $ctName ),
     );
 
     $categories_sorted = array();

@@ -1,22 +1,30 @@
 <?php
-	// ct = custom theme
 
 	// blog block
 	function ct_blog_block() {
 
 		// check function exists
 		if( function_exists('ct_blog_block') ) {
-
+			
+			// ct = custom theme
+			global $ctName;
+			
+			$blockName = 'Blog';
+			$blockNameLC = strtolower($blockName);
+			$blockSlug = preg_replace('/\s+/', '-', $blockNameLC);
+			$icon = 'columns';
+			
 			// register a portfolio item block
-			acf_register_block(array(
-				'name'				=> 'blog',
-				'title'				=> __('Blog'),
-				'description'		=> __('Allows you to add a blog section.'),
-				'render_template'	=> 'acf-block-templates/blog.php',
-				'category'			=> 'ct-theme',
-				'icon'				=> 'columns',
-				'keywords'			=> array( 'blog' ),
+			acf_register_block_type(array(
+				'name'				=> $blockNameLC,
+				'title'				=> __($blockName),
+				'description'		=> __('Allows you to add a ' . $blockNameLC . ' block.'),
+				'render_template'	=> 'acf-block-templates/' . $blockSlug . '.php',
+				'category'			=> $ctName,
+				'icon'				=> $icon,
+				'keywords'			=> array( $blockNameLC ),
 			));
+			
 		}
 	}
 

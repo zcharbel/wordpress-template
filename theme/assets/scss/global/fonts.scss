@@ -2,6 +2,31 @@
 /////////// Fonts ///////////
 /////////////////////////////
 
+// custom font embed
+// @mixin fontSrc($fontName,$fontFile){
+// 	font-family: $fontName;
+// 	src: url('assets/fonts/#{$fontFile}.eot?#iefix') format('embedded-opentype'),
+// 		url('assets/fonts/#{$fontFile}.woff2') format('woff'),
+// 		url('assets/fonts/#{$fontFile}.ttf') format('truetype');
+// }
+
+// @mixin fontBuild($fontName, $fontWeight){
+// 	font-family: $fontName, Helvetica, Arial, sans-serif;
+// 	font-weight: $fontWeight;
+// 	font-style: normal;
+// 	font-display: swap;
+// }
+
+// baselReg
+// @font-face {
+// 	@include fontSrc('baselReg','Basel-Grotesk-Regular-Trial');
+// }
+
+// @mixin baselReg() {
+// 	@include fontBuild('baselReg', 400);
+// }
+
+// Google font/typekit includes
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Roboto:400,400i,700,700i&display=swap');
 
 $roboto: 'Roboto', sans-serif;

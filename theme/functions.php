@@ -3,10 +3,6 @@
  * Theme Boilerplate functions and definitions
  **/
 
-function no_function_admin_bar() {
-	return false;
-}
-add_filter('show_admin_bar', 'no_function_admin_bar');
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
 
@@ -39,7 +35,6 @@ $ctName = 'ct-theme';
 require get_template_directory() . '/_includes/acf/acf-excerpt.php';
 require get_template_directory() . '/_includes/acf/acf-options.php';
 require get_template_directory() . '/_includes/acf/acf-sync.php';
-//require get_template_directory() . '/_includes/acf/acf-layout.php';
 require get_template_directory() . '/_includes/acf/hide-gutenberg-blocks.php';
 require get_template_directory() . '/_includes/acf/acf-block-categories.php';
 require get_template_directory() . '/_includes/acf/acf-blocks.php';

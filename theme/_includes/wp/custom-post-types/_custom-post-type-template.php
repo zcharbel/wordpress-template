@@ -1,10 +1,9 @@
 <?php 
-//////////////////////
-// Team Member Custom Post type
-//////////////////////
 
 global $frameworkName;
-$cptName = 'Team Member';
+
+// CPT Individual Name 
+$cptName = 'CPT Name Goes Here';
 
 // CPT Supports
 $cptSupports = array( 'title', 'editor', 'thumbnail' );

@@ -81,7 +81,7 @@ module.exports = function(grunt) {
 		clean: {
 			general: ['production/'],
 			node_mods: ['production/node_modules'],
-			remove_default_themes: ['wordpress/wp-content/themes/twentytwentytwo','wordpress/wp-content/themes/twentytwentyone','wordpress/wp-content/themes/twentytwenty', 'wordpress/wp-content/themes/twentynineteen', 'wordpress/wp-content/themes/twentyseventeen', 'wordpress/wp-content/themes/twentysixteen'],
+			remove_default_themes: ['wordpress/wp-content/themes/twentytwentythree','wordpress/wp-content/themes/twentytwentytwo','wordpress/wp-content/themes/twentytwentyone','wordpress/wp-content/themes/twentytwenty', 'wordpress/wp-content/themes/twentynineteen', 'wordpress/wp-content/themes/twentyseventeen', 'wordpress/wp-content/themes/twentysixteen'],
 			removeTheme: ['<%= themePath %>'],
 		},
 		sync: {

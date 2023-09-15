@@ -1,0 +1,20 @@
+@mixin setMaxWidth(){
+	max-width: 1920px;
+}
+
+@mixin globalMaxWidth(){
+	width: calc(100% - 96px);
+	@include setMaxWidth();
+	margin: 0 auto;
+	
+	@include until($tp){
+		width: calc(100% - 70px);
+	}
+
+}
+
+@mixin smallerMaxWidthAdmin(){
+	width: calc(100%);
+	margin-left: 0;
+	margin-right: 0;
+}

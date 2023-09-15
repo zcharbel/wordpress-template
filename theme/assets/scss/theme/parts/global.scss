@@ -1,0 +1,64 @@
+/*--------------------------------------------------------*/
+/*-------------------- GLOBAL VARIABLES-------------------*/
+/*--------------------------------------------------------*/
+$spacerLarge: 75px;
+$spacerMedium: 48px;
+
+/*--------------------------------------------------------*/
+/*--------------------- GLOBAL STYLES --------------------*/
+/*--------------------------------------------------------*/
+
+* {
+	webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+html,
+body{
+	background:$white !important;
+	margin: 0;
+	padding: 0;	
+	@include latoBook();
+	@include para();
+	color: $grey;
+}
+
+.clear-fix{ clear:both; }
+
+.antispam{ display:none; }
+
+h1{ @include h1(); }
+h2{ @include h2(); }
+h3{ @include h3(); }
+h4{ @include h4(); }
+h5{ @include h5(); }
+h6{ @include h6(); }
+
+h1,h2,h3,h4,h5,h6{
+	margin-top:0;
+	margin-bottom:0;
+}
+
+p{	
+	&:last-child{
+		margin-bottom: 0;
+	}
+} // end p
+
+ul{
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+a{
+	position: relative;
+	outline: none !important;
+	color: $blue;
+}
+
+strong{ 
+	//@include robotoBold(); 
+}

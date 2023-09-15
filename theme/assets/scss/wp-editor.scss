@@ -1,4 +1,4 @@
-@import "global/mixins";
+@import "mixins";
 //@import "global/reset";
 
 p,
@@ -60,24 +60,3 @@ html :where(.wp-block){
 	}
 	
 }
-
-/*.edit-post-layout__metaboxes:not(:empty){
-		max-width: 500px !important;
-
-		@include at-least($d){
-			max-width: 800px !important;
-		}
-
-		@include at-least($dl){
-			max-width: 1000px !important;
-		}
-}
-
-.green-text{ color: $green; }
-
-.interface-interface-skeleton__content{
-	width: 70% !important;
-	flex-grow: unset !important;
-}*/
-
-

@@ -6,23 +6,24 @@
 @import 'global/text-size';
 
 // contains global scss files
-@import "parts/global";
-@import "parts/block";
-@import "parts/logo";
-@import "parts/menus/some";
-@import "parts/header";
-@import "parts/footer";
-@import "parts/main-content";
-@import "parts/btn";
-@import "parts/posts";
-@import "parts/gravity-forms";
+@import "theme/parts/global";
+@import "theme/parts/block";
+@import "theme/parts/logo";
+@import "theme/parts/menus/some";
+@import "theme/parts/header";
+@import "theme/parts/footer";
+@import "theme/parts/main-content";
+@import "theme/parts/btn";
+@import "theme/parts/posts";
+@import "theme/parts/gravity-forms";
 
 // contains all page scss files
-@import "pages/single";
+@import "theme/pages/single";
 
 // contains ll block scss files
-@import "blocks/block-columns";
-@import "blocks/accordion";
-@import "blocks/image";
-@import "blocks/carousel";
-@import "blocks/video";
+@import "theme/blocks/block-columns";
+@import "theme/blocks/content";
+@import "theme/blocks/accordion";
+@import "theme/blocks/image";
+@import "theme/blocks/carousel";
+@import "theme/blocks/video";

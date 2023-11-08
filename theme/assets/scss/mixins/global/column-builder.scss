@@ -1,8 +1,8 @@
 // to include this mixin. Copy the line below and update the variable to what you need.
-// @include columnBuilder(repeat(3, minmax(0, 1fr)));
+// @include columnBuilder(repeat(3, minmax(0, 1fr)), 21px);
 
-@mixin columnBuilder($columnNumber){
+@mixin columnBuilder($columnNumber, $gridGap){
 	display: grid;
-	column-gap: 21px;
+	column-gap: $gridGap;
 	grid-template-columns: $columnNumber;
 }

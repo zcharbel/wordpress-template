@@ -1,6 +1,7 @@
 // merges all files used in both front-end and wp admin parts of sites
 
 // contains all global scss files
+@import 'global/reset';
 @import 'global/colors';
 @import 'global/fonts';
 @import 'global/text-size';

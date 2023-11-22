@@ -23,13 +23,13 @@ function load_scripts(){
 	
 	// adds slick carousel
 	wp_enqueue_style( 'slickcss', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), null, false );
-	wp_enqueue_script( 'slickjs', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array( 'jquery' ), null, false );
+	wp_enqueue_script( 'slickjs', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', ['jquery'], null, false);
 
     //wp_enqueue_script( 'scrollmagic','//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', array( 'jquery' ), null, false );
 	//wp_enqueue_script( 'scrollmagicind', get_template_directory_uri() . '/assets/js/vendor/debug.addIndicators.js', array( 'jquery' ), null, false );
 	//wp_enqueue_script( 'scrollmagic', get_template_directory_uri() . '/assets/js/vendor/jquery.ScrollMagic.js', array( 'jquery' ), null, false );
 	
-		wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), filemtime(get_template_directory_uri() . '/assets/js/main.js'), true );
+		wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], null, false);
 
 
 }

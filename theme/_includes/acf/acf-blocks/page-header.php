@@ -1,18 +1,18 @@
 <?php
 
-	// faq block
-	function ct_faq_block() {
-		
+	// carousel block
+	function ct_page_header_block() {
+
 		// check function exists
-		if( function_exists('ct_faq_block') ) {
+		if( function_exists('ct_page_header_block') ) {
 			
 			// ct = custom theme
 			global $ctName;
 			
-			$blockName = 'FAQ';
+			$blockName = 'Page Header';
 			$blockNameLC = strtolower($blockName);
 			$blockSlug = preg_replace('/\s+/', '-', $blockNameLC);
-			$icon = 'excerpt-view';
+			$icon = 'format-gallery';
 			
 			// register a portfolio item block
 			acf_register_block_type(array(
@@ -24,8 +24,8 @@
 				'icon'				=> $icon,
 				'keywords'			=> array( $blockNameLC ),
 			));
-	
+			
 		}
 	}
 
-	add_action('acf/init', 'ct_faq_block');
+	add_action('acf/init', 'ct_page_header_block');

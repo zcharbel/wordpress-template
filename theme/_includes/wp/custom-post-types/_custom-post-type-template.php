@@ -13,5 +13,4 @@ $menuIcon = 'dashicons-admin-users';
 
 require get_template_directory() . '/_includes/wp/custom-post-types/_cpt-template.php';
 
-
-register_post_type( $cptSlug . '-cpt', $teamMemberArgs );
+register_post_type( $cptSlug . '-cpt', $cptTemplateArgs );

@@ -14,7 +14,7 @@
 <body <?php body_class(); ?>>
 
 <?php 
-$gtmTag = get_field('gtm_id', 'option');
+$gtmTag = get_field('google_tag_manager_id', 'option');
 if( $gtmTag ): ?>
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-<?php echo get_field('gtm_id', 'option')?>"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

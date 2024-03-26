@@ -4,9 +4,7 @@ global $taxName;
 global $frameworkName;
 
 if(str_contains($taxName, 'y')){
-    $taxNamePlural = preg_replace('/y/', 'ie', $taxName);
-}else{
-    $taxNamePlural = $taxName;
+    $taxName = preg_replace('/y/', 'ie', $taxName);
 }
 
 $taxSlug = preg_replace('/\s+/', '-', $taxName);

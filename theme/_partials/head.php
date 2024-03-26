@@ -1,5 +1,5 @@
 <?php $gtmTag = get_field('google_tag_manager_id', 'option');
-$gaTag = get_field('google_analytics_id');
+$gaTag = get_field('google_analytics_id', 'option');
 
 if( $gtmTag ): ?>
     <!-- Google Tag Manager -->
@@ -9,6 +9,18 @@ if( $gtmTag ): ?>
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','<?php echo $gtmTag; ?>');</script>
     <!-- End Google Tag Manager -->
+<?php endif;
+
+if( $gaTag ): ?>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JX7WHRGQN2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-<?php echo $gaTag; ?>');
+    </script>
 <?php endif; ?>
 
 <?php if( $gaTag ): ?>
@@ -28,6 +40,7 @@ if( $gtmTag ): ?>
 
 <meta content="<?php get_bloginfo('html_type'); ?>" charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php endif; ?>

@@ -15,11 +15,14 @@
 
 <?php 
 $gtmTag = get_field('google_tag_manager_id', 'option');
+
 if( $gtmTag ): ?>
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-<?php echo get_field('gtm_id', 'option')?>"
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-<?php echo $gtmTag?>"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 <?php endif; ?>
+
+<a href="#main-content" class="skip-to-main-content-link">Skip to main content</a>
 
 <header>
 	<div class="header__content">

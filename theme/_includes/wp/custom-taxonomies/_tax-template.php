@@ -3,7 +3,7 @@
 global $taxName;
 global $frameworkName;
 
-if(str_contains($taxName, 'y')){
+if(substr($taxName, -1) == 'y'){
     $taxName = preg_replace('/y/', 'ie', $taxName);
 }
 

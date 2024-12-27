@@ -1,0 +1,60 @@
+.popup{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	width: 100vw;
+	height: 100vh;
+	background-color: $black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	
+	&-content{
+		position: relative;
+		box-sizing: border-box;
+		padding: 20px;
+		background-color: $white;
+		border-radius: 10px;
+		
+		@include until($tl){
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		@include at-least($tl){
+			padding-right: 40px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.close-btn{
+			position: absolute;
+			cursor: pointer;
+			
+			@include until($tl){
+				top: -45px;
+				right: 0px;
+				background: url(assets/imgs/icons/close.svg) $white 50% 50% no-repeat;
+				background-size: 70% 70%;
+				border-radius: 5px;
+				width: 35px;
+				height: 35px;
+			}
+			
+			@include at-least($tl){
+				width: 26px;
+				height: 25px;
+				mask-size: 100% 100%;
+				mask-repeat: no-repeat;
+				background-color: $black;
+				mask-image: url(assets/imgs/icons/close.svg);
+				top: 15px;
+				right: 15px;
+			}
+		} // end .close-btn
+		
+	} // end .popup-content
+} // end .popup

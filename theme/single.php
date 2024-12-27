@@ -16,13 +16,13 @@ get_header();
         
         <div class="content">
             <div class="return-to-blog">
-                <a href="/blog">Return to blog</a>
+                <a href="/blog/">Return to blog</a>
             </div>
             <h1><?php the_title(); ?></h1>
             <?php // Include the page content template.
             the_content();?>
             <div class="return-to-blog">
-                <a href="/blog">Return to blog</a>
+                <a href="/blog/">Return to blog</a>
             </div>
         </div>
         

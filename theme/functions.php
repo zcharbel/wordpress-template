@@ -3,6 +3,11 @@
  * Theme Boilerplate functions and definitions
  **/
 
+function no_function_admin_bar() {
+     return false;
+ }
+ add_filter('show_admin_bar', 'no_function_admin_bar');
+
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'title-tag' );
 

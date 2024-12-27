@@ -1,6 +1,13 @@
 		</div>
 		<!-- End Main Content Container -->
 		
+		<div class="popup">
+			<div class="popup-content">
+				
+				<div class="close-btn"></div>
+			</div>
+		</div>
+		
 		<footer>
 			<div class="container">
 				<div class="menus">

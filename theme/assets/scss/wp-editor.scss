@@ -7,7 +7,12 @@
 	blockquote,
 	.wp-block {
 		//display: block;
-		margin: 0 auto; 
+		margin: 0; 
+		
+		.acf-block-component{
+			width: calc( 100vw - 297px);
+			
+		}
 	}
 	
 	body{
@@ -45,15 +50,6 @@
 		margin-bottom: 25px;
 	}
 	
-	html :where(.wp-block){
-		max-width: 90%;
-		
-		.wp-block{
-			max-width: 100%;
-		}
-		
-	}
-	
 	.mce-content-body{
 		padding: 10px;
 		
@@ -63,4 +59,8 @@
 		
 	}
 
+}
+
+html .editor-styles-wrapper :where(.wp-block){
+	max-width:  100% !important;
 }

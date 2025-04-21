@@ -19,9 +19,9 @@ body{
 	background:$white !important;
 	margin: 0;
 	padding: 0;	
-	@include latoBook();
+	@include nunitoReg();
 	@include para();
-	color: $grey;
+	color: $greyDark;
 }
 
 .skip-to-main-content-link {
@@ -44,6 +44,10 @@ body{
 
 .antispam{ display:none; }
 
+strong{ 
+	@include nunitoBold(); 
+}
+
 h1{ @include h1(); }
 h2{ @include h2(); }
 h3{ @include h3(); }
@@ -51,18 +55,67 @@ h4{ @include h4(); }
 h5{ @include h5(); }
 h6{ @include h6(); }
 
+h1,h2,h3,h4{
+	@include robotoSlabMed();
+	color: $green;
+	
+	strong{ 
+		@include robotoSlabBold(); 
+	}
+	
+	& + h4{ 
+		color: $greyDark;
+		&:before{
+			content: '';
+			height: 2px;
+			background-color: $greyDark;
+			width: 70%;
+			display: block;
+			margin: 3px auto;
+			border-radius: 1px;
+		}
+	}
+		
+}
+
 h1,h2,h3,h4,h5,h6{
 	margin-top:0;
 	margin-bottom:0;
+	
+	& + h1, & + h2, & + h3, & + h4{
+		margin-top: 5px;
+	}
+	
+	& + h5, & + h6, & + p, & + ul, & + ol{
+		margin-top: 10px;
+	}
+	
 }
 
-p{	
+p, ul, ol{	
+	& + h1, & + h2, & + h3, & + h4{
+		margin-top: 15px;
+	}
+	
+	& + h5, & + h6, & + p, & + ul, & + ol{
+		margin-top: 10px;
+	}
+	
+	&.large{
+		@include paraLg();
+	}
+	
+	&.small{
+		@include paraSm();
+	}
+	
 	&:last-child{
 		margin-bottom: 0;
 	}
 } // end p
 
-ul{
+ul,
+ol{
 	padding-top: 0;
 	padding-bottom: 0;
 	margin-top: 0;
@@ -74,6 +127,154 @@ a{
 	color: $blue;
 }
 
-strong{ 
-	//@include robotoBold(); 
+.has-divider{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	
+	span{
+		background-color: $white;
+		padding: 0 clamp(10px, 2.08vw, 40px);
+		position: relative;
+		z-index: 10;
+	}
+	
+	&:before{
+		content: '';
+		position: absolute;
+		top: 54%;
+		width: 100%;
+		height: 2px;
+		background-color: $green;
+		display: block;
+	}
+}
+
+.two-columns{
+	text-align: center;
+	
+	@include at-least($tl){
+		@include columnBuilder(repeat(2, minmax(0, 1fr)), 2rem);
+	}
+	
+	.column{
+		&:not(:nth-child(1)){
+			margin-top: 30px;
+		}
+		
+		@include at-least($tl){
+			&:nth-child(2){ margin-top: 0; }
+		}
+	}
+	
+	.icon,
+	.work-thumb{
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		$clampVar: clamp(230px, 20.83vw, 230px);
+		height: auto;
+		width: $clampVar;
+		margin-bottom: 20px;
+		
+		img{
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			max-height: 100%;
+		}
+		
+	}
+	
+	.icon{ width: 180px; }
+}
+
+.three-columns{
+	text-align: center;
+	
+	@include at-least($tl){
+		@include columnBuilder(repeat(2, minmax(0, 1fr)), 2rem);
+	}
+	
+	@include at-least($d){
+		@include columnBuilder(repeat(3, minmax(0, 1fr)), 2rem);
+	}
+	
+	.column{
+		&:not(:nth-child(1)){
+			margin-top: 50px;
+		}
+		
+		@include at-least($tl){
+			&:nth-child(2){ margin-top: 0; }
+		}
+		
+		@include at-least($d){
+			&:nth-child(3){ margin-top: 0; }
+		}
+	}
+	
+	.icon,
+	.work-thumb{
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: clamp(15px, 1.39vw, 20px);
+		
+		@include until($tl){
+			height: auto;
+		}
+		
+		
+	}
+	
+	.work-thumb{
+		$clampVar: clamp(160px, 20.83vw, 230px);
+		height: $clampVar;
+		width: $clampVar;
+		
+		img{
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			max-height: 100%;
+		}
+		
+	}
+	
+	.icon{
+		$clampVar: clamp(140px, 20.83vw, 140px);
+		
+		
+		img{
+			height: $clampVar;
+			width: $clampVar;
+		}
+		
+	}
+}
+
+.pagination{
+	margin-top: 25px;
+	display: flex;
+	justify-content: center;
+	
+	.page-numbers{
+		background-color: transparent;
+		padding: 7px 10px;
+		color: $greyDark;
+		margin: 0 4px;
+		
+		&.current{
+			background-color: $green;
+			color: $white;
+		}
+	}
+	
+} // end .pagination
+
+.wp-block-separator{
+	border-color: $black !important;
 }

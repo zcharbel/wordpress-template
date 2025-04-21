@@ -6,7 +6,7 @@ global $post;
 
 $postArgs = array(
 	'post_type' =>  'post',
-	'posts_per_page' => 12,
+	'posts_per_page' => 8,
 	'paged' => $paged,
 	'post_status' => 'publish'
 );
@@ -19,16 +19,28 @@ if ($the_query->have_posts()) { ?>
 
 	<div class="block block__blog">
 		<div class="container">
-			<div class="posts">
+			<div class="posts two-columns">
 				<?php while ($the_query->have_posts()) {
 					$the_query->the_post(); 
 					
 					$date = get_the_date('Y/m/d');
 					$postThumbnail = get_the_post_thumbnail_url();
 					$postExcerpt = get_the_excerpt();
+					$title = get_the_title();
+					$permalink = get_the_permalink(); ?>
 					
-					require get_template_directory().'/_partials/post-card.php'; 
-				}?>
+					<div class="post">
+					
+						<?php if( $date ): ?>
+							<h6 class="post__date"><?php echo $date; ?></h6>
+						<?php endif; ?>
+						
+						<h4 class="post__title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h4>
+						<?php the_excerpt();?>
+						<p class="btn"><a href="<?php echo $permalink; ?>">Read Post</a></p>
+					
+					</div>
+				<?php }?>
 			</div>
 			
 			<?php if( $the_query->max_num_pages > 1 ): ?>

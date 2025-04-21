@@ -1,19 +1,6 @@
 .editor-styles-wrapper{
 	
 	@import "mixins";
-	//@import "global/reset";
-	
-	p,
-	blockquote,
-	.wp-block {
-		//display: block;
-		margin: 0; 
-		
-		.acf-block-component{
-			width: calc( 100vw - 297px);
-			
-		}
-	}
 	
 	body{
 		margin: 9px 10px;
@@ -37,7 +24,6 @@
 	}
 	
 	@import "compile";
-	//@import 'vendor/bootstrap/bootstrap-grid';
 	
 	#tinymce{
 		ul{
@@ -58,9 +44,14 @@
 		}
 		
 	}
-
+	
+		.block-image .container{ width: 100% !important; margin: 0; }
+	
 }
 
 html .editor-styles-wrapper :where(.wp-block){
-	max-width:  100% !important;
+	max-width:  calc(100% - 96px) !important;
+	&:not(:last-child){
+		margin-bottom: 20px;
+	}
 }

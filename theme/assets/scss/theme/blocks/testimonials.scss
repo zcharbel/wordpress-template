@@ -1,0 +1,112 @@
+.block-testimonials{
+    position: relative;
+    background-color: $greyLight;
+    overflow: hidden;
+    
+    &:before{
+        content: '';
+        @include horizontalCenter(absolute);
+        width: 110%;
+        height: 100%;
+        display: block;
+        box-shadow: 0px 0px 5px 0px rgba(36,39,33,0.75) inset;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(36,39,33,0.75) inset;
+        -moz-box-shadow: 0px 0px 5px 0px rgba(36,39,33,0.75) inset;
+    }
+    
+    .container{
+        @include until($tl){
+            width: 100%;
+        }
+        
+        .name{
+            position: relative;
+            display: inline-block;
+            padding: 12px 18px 0 18px;
+            margin-top: 15px;
+            color: $green;
+            
+            &:before{
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 2px;
+                width: 100%;
+                display: block;
+                background-color: $black;
+            }
+            
+            & + .company{
+                margin-top: 0;
+            }
+        } // end .name
+    } // end .container
+    
+    .slick-arrow{
+        z-index: 10;
+        cursor: pointer;
+        
+        @include until($tl){
+            position: absolute;
+            bottom: 40px;
+        }
+        
+        @include at-least($tl){
+            @include verticalCenter(absolute);
+        }
+        
+        &.slick-next,
+        &.slick-prev{
+            width: 15px;
+            height: 25px;
+            text-indent: -9999px;
+        }
+        
+        &.slick-next{ 
+            background: url(assets/imgs/icons/chevron-right.svg) no-repeat 0 0 transparent;
+            right: 20px; 
+        }
+        
+        &.slick-prev{ 
+            background: url(assets/imgs/icons/chevron-left.svg) no-repeat 0 0 transparent;
+            left: 20px; 
+        }
+        
+    } // end .slick-arrow
+    
+    .slick-dots{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+        li{
+            &:not(:last-child){ margin-right: 10px; }
+            
+            button{ cursor: pointer !important; }
+            
+        } // end li
+    } // end .slick-dots
+    
+    .slick-list{
+        padding: clamp(30px, 3.91vw, 75px) 0;
+        margin: 0 clamp(0px, 5.21vw, 100px);
+        text-align: center;
+        
+        h4 + h6{ margin-top: 30px; }
+        
+        h6{
+            color: $green;
+            
+            & + p{ margin-top: 8px; }
+            
+        }
+        
+    }
+    
+    .slick-slide{
+    } // end .slick-slide
+    
+} // end .block-carousel

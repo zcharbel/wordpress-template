@@ -12,7 +12,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33.333",
                 "class": "",
                 "id": ""
             },
@@ -25,7 +25,28 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "png, jpg, jpeg, svg, webp",
+            "allow_in_bindings": 1,
             "preview_size": "medium"
+        },
+        {
+            "key": "field_65c279440bb08",
+            "label": "Add Circle Mask",
+            "name": "add_circle_mask",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.333",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -45,6 +66,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1683121533
+    "show_in_rest": 1,
+    "modified": 1741868818
 }

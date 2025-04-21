@@ -1,34 +1,34 @@
 {
-    "key": "group_644913a285d8e",
-    "title": "Full Width (All Blocks)",
+    "key": "group_5ee1430514cd5",
+    "title": "Service (CPT)",
     "fields": [
         {
-            "key": "field_644913a2ecd97",
-            "label": "Is this block full width?",
-            "name": "is_this_block_full_width",
+            "key": "field_5ee14316a9def",
+            "label": "Description",
+            "name": "description",
             "aria-label": "",
-            "type": "true_false",
+            "type": "wysiwyg",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "all"
+                "value": "service-cpt"
             }
         ]
     ],
@@ -37,9 +37,11 @@
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1682536705
+    "modified": 1707153991
 }

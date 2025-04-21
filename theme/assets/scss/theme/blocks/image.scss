@@ -1,5 +1,23 @@
 .block-image{
     
-    img{ width: 100%; max-width: 100%;}
+    &.circle-mask{
+        max-width: clamp(284px, 25.21vw, 484px);
+        max-height: clamp(284px, 25.21vw, 484px);
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    
+    img{ 
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        margin-top: -30px;
+    }
+    
+    & + .block-content{
+        margin-top: clamp(20px, 2.08vw, 40px) !important;
+    }
     
 } // end .block-image
+

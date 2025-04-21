@@ -1,0 +1,21 @@
+.block-services{
+    
+   .container{
+      .services{
+         @include at-least($tl){
+            margin-top: clamp(20px, 2.08vw, 40px);
+         }
+         
+         .service{
+            
+            h5{ 
+               color: $green;
+               @include robotoSlabMed();
+            }
+            
+               .description{ margin-top: 10px; }
+         
+         } // end .service
+      } // end .services
+   } // end .container
+} // end .block-carousel

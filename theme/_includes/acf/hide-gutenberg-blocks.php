@@ -26,6 +26,10 @@ function usr_allowed_block_types( $allowed_blocks ) {
     //'core/quote',
     'core/video',
     'core/custom-html',
+    'core/group',
+    'core/grid',
+    'core/buttons',
+    'core/social-icons',
   );
   
   // this adds in all custom ACF blocks

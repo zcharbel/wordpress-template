@@ -1,16 +1,16 @@
 <?php 
 //////////////////////
-// Team Member Custom Post type
+// FAQs Custom Post type
 //////////////////////
 
 global $frameworkName;
-$cptName = 'Team Member';
+$cptName = 'Testimonial';
 
 // CPT Supports
 $cptSupports = array( 'title', 'editor', 'thumbnail' );
 
 // CPT Menu Icon
-$menuIcon = 'dashicons-admin-users';
+$menuIcon = 'dashicons-excerpt-view';
 
 require get_template_directory() . '/_includes/wp/custom-post-types/_cpt-template.php';
 

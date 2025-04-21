@@ -7,7 +7,7 @@ global $frameworkName;
 $cptName = 'FAQ';
 
 // CPT Supports
-$cptSupports = array( 'title', 'editor', 'thumbnail' );
+$cptSupports = array( 'title', 'thumbnail' );
 
 // CPT Menu Icon
 $menuIcon = 'dashicons-excerpt-view';

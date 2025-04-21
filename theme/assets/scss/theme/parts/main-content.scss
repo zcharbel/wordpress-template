@@ -1,11 +1,18 @@
 #main-content{
 	//padding-left: 25px;
 	//padding-right: 25px;
+	margin-top: clamp(67px, 5.68vw, 109px);
 	
-	@include at-least($tl){
-		//padding-left: 0;
-		//padding-right: 0;
-		//@include globalMaxWidth();
+	ul{
+		li{
+			position: relative;
+			text-indent: -16px;
+			margin-left: 40px;
+			
+			&:before{
+				content:'• ';				
+			}
+		}
 	}
-
+	
 } // end #main-content

@@ -1,18 +1,18 @@
 <?php
 
-	// team block
-	function ct_team_block() {
+	// services block
+	function ct_services_block() {
 
 		// check function exists
-		if( function_exists('ct_team_block') ) {
+		if( function_exists('ct_services_block') ) {
 			
 			// ct = custom theme
 			global $ctName;
 			
-			$blockName = 'Team';
+			$blockName = 'Services';
 			$blockNameLC = strtolower($blockName);
 			$blockSlug = preg_replace('/\s+/', '-', $blockNameLC);
-			$icon = 'admin-users';
+			$icon = 'columns';
 			
 			// register a portfolio item block
 			acf_register_block_type(array(
@@ -28,4 +28,4 @@
 		}
 	}
 
-	add_action('acf/init', 'ct_team_block');
+	add_action('acf/init', 'ct_services_block');

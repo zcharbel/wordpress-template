@@ -9,23 +9,27 @@ button{
 
 // base button styling
 @mixin btnBase() {
-	padding: 7px 34px 12px 34px;
-	border-radius: 20px;
-	display: block;
+	padding: 8px 34px 9px 34px;
+	border-radius: 10px;
+	display: inline-block;
 	transition: .25s;
 	text-decoration: none;
+	@include robotoSlabReg();
+	@include paraLg();
 }
 
 // different button stylings (solid, outline, etc.)
 @mixin btnSolid() {
 	@include btnBase();
-	background: $white;
-	border: 1px solid $white;
-	color: $black;
+	background: $greenLight;
+	border: 1px solid $greenLight;
+	color: $white;
+	 cursor: pointer;
 	
 	&:hover{
 		background: $white;
-		color: $black;
+		color: $green;
+		border-color: $green;
 	}
 }
 

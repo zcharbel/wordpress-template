@@ -1,26 +1,27 @@
 header{
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	background-color: $white;
 	z-index: 1000;
+	box-shadow: 0px 0px 5px 0px rgba(36,39,33,0.75);
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(36,39,33,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(36,39,33,0.75);
 	
 	.header__content{
 		@include globalMaxWidth();
 		display: flex;
 		justify-content: space-between;
+		margin: clamp(12px, 1.20vw, 23px) auto;
 		
 		@include until($tl){
-			//position: fixed;
-			//top: 0;
-			//left: -100vw;
-			//width: 100vw;
-			margin-top: 25px;
 			height: 100%;
 		}	
 		
 		@include at-least($tl){
 			padding-left: 0;
 			padding-right: 0;
-			margin-top: 10px;
-			margin-bottom: 30px;
 			align-items: center;
 		}
 		

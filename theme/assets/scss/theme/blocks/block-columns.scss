@@ -6,9 +6,14 @@
     }
     
     @include until($tl){
+        display: block !important;
+    }
+    
+    @include until($tl){
         &:not(:last-child){
             margin-bottom: 0;
         }
+        
     }	
     
     & + .wp-block-columns{

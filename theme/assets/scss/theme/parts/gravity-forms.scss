@@ -1,13 +1,114 @@
 .gform_wrapper{
-	@include globalMaxWidth();
-	margin-top: 50px;
+	margin-top: 20px;
+	
+	legend,
+	.gfield_label{
+		@include robotoSlabReg();
+		
+	}
+	
+	.ginput_complex{
+		@include at-least($tl){
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		span{
+			
+			@include until($tl){
+				display: block;
+				
+				& + span{
+					margin-top: 15px;
+				}
+			}
+			
+			@include at-least($tl){
+				width: 49%;
+				display: inline-block;
+			}
+		}
+		
+		.gf_clear_complex{ display: none; }
+	}
+	
+	input {
+		@include nunitoReg();
+		font-size: 18px;
+		width: 100%;
+		padding: 10px 20px;
+		box-sizing: border-box;
+	}
+	
+	.gchoice{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		
+		input{ 
+			width: 15px;
+			height: 15px;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-right: 10px;
+		}
+		label{
+			@include para();
+		}
+	}
+	
+	.gform_required_legend{
+		@include paraSm();
+	}
+	
+	.gfield_required{ color: $red; }
+	
+	.gform-datepicker{
+	}
+
+	.gform_validation_errors{
+		margin-bottom: 5px;
+		.gform_submission_error{
+			@include h6();
+			color: $red;
+			
+			.gform-icon--circle-error{
+				display: none;
+			}
+		}
+		
+		ol{ display: none; }	
+	}
+	
+	
+	.gfield_validation_message,
+	.validation_message{
+		color: $red;
+		@include paraSm();
+		margin-top: 3px;
+	} // end .validation_message
+	
+	.gform_footer{
+		display: flex;
+		justify-content: flex-end;
+		
+		.button{
+			@include btnSolid();
+			margin-top: 20px;
+			
+			@include at-least($tl){
+				
+				width: inherit;
+			}
+		}
+	} // end .gform_footer	
 	
 	.gsection_title,
 	.gfield_label{
 	}
 	
 	.half-width{
-
+	
 	}
 	
 	.gfield{
@@ -16,10 +117,8 @@
 		}
 	}
 	
-	.validation_message{
-	} // end .validation_message
-	
-	.gform_footer{
-		
-	} // end .gform_footer	
+	.gfield_select,
+	.ginput_complex select,
+	input {
+	}
 } // end .gform_wrapper

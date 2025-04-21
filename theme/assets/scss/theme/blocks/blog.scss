@@ -1,5 +1,33 @@
 .block__blog{
     
-    
+    .posts{
+        text-align: left;
+        
+        .post{
+           
+           margin-top: 40px;
+           
+           &:nth-child(1){ margin-top: 0; }
+           
+           @include at-least($tl){
+            &:nth-child(2){ margin-top: 0; }
+           }
+           
+           &__title{
+               @include at-least($tl){
+                max-width: 90%;
+               }
+               
+               a{
+                   color: $green;
+               }
+               
+               & + p{
+                   a{ display: none; }
+               }
+           }
+           
+        }
+    }
     
 } // end .block__blog

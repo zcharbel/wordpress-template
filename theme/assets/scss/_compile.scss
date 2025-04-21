@@ -6,6 +6,13 @@
 @import 'global/fonts';
 @import 'global/text-size';
 
+// contains all vendor scss files
+@import 'vendor/slick-slider';
+@import 'vendor/gravity-forms';
+
+// contains all partial scss files
+@import 'theme/partials/return-to-blog';
+
 // contains global scss files
 @import "theme/parts/global";
 @import "theme/parts/block";
@@ -17,16 +24,22 @@
 @import "theme/parts/btn";
 @import "theme/parts/posts";
 @import "theme/parts/gravity-forms";
+@import "theme/parts/woocommerce";
 @import "theme/parts/popup";
 
 // contains all page scss files
 @import "theme/pages/single";
+@import "theme/pages/category";
 
 // contains ll block scss files
 @import "theme/blocks/block-columns";
 @import "theme/blocks/content";
 @import "theme/blocks/accordion";
+@import "theme/blocks/blog";
 @import "theme/blocks/image";
 @import "theme/blocks/carousel";
 @import "theme/blocks/video";
 @import "theme/blocks/page-header";
+@import "theme/blocks/how-i-think";
+@import "theme/blocks/testimonials";
+@import "theme/blocks/services";

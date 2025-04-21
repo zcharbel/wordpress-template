@@ -52,3 +52,7 @@ require get_template_directory() . '/_includes/nav/simple_menu.php';
 
 //require get_template_directory() . '/_includes/wp/trim-excerpt.php';
 require get_template_directory() . '/_includes/wp/add-read-more.php';
+
+add_filter( 'gform_disable_css', '__return_true' );
+add_filter( 'gform_disable_form_theme_css', '__return_true' );
+

@@ -1,11 +1,9 @@
 a.logo,
 .logo{
-	background-color: transparent;
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	background-position: 0 0;
-	width: 159px;
-	height: 88px;
+	width: clamp(110px, 8.54vw, 164px);
+	height: clamp(43px, 3.33vw,64px);
 	display: block;
 	text-indent: -9999px;
+	background: url(assets/imgs/logo.svg) no-repeat 0 0 transparent;
+	background-size: 100% auto;
 } // end .logo

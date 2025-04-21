@@ -6,20 +6,40 @@
 	
 } // end .block
 
+
+
 #main-content{
+	
+	$fiftyClamp: clamp(30px, 3.47vw,50px);
+	$oneSixtyClamp: clamp(110px, 11.11vw, 160px);
+	
 	.wp-block-columns,
 	.block{
-		margin-top: 50px;
+		margin-top: $fiftyClamp;
+		
+		&:first-child{ margin-top: $oneSixtyClamp; }
 		
 		&:last-child{
-			padding-bottom: 50px;
+			padding-bottom: $fiftyClamp;
 		}
 	}
 	
 	.wp-block-columns{
 		margin-top: 50px !important;
 		
+		&:first-child{ margin-top: $oneSixtyClamp !important;  }
+		
 		.wp-block-column{
+			
+			& + .wp-block-column{ 
+				margin-top: 0px !important;
+				
+				@include until($tl){
+					margin-top: 20px !important;
+				}
+					
+			}
+			
 			.block{
 				margin-top: 0; 
 				

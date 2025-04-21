@@ -13,21 +13,11 @@
 
 <body <?php body_class(); ?>>
 
-<?php 
-$gtmTag = get_field('google_tag_manager_id', 'option');
-
-if( $gtmTag ): ?>
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-<?php echo $gtmTag?>"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-<?php endif; ?>
-
 <a href="#main-content" class="skip-to-main-content-link">Skip to main content</a>
 
 <header>
 	<div class="header__content">
-		<?php $logo = get_field('co_info_logo', 'option')?>
-		<a href="/" class="logo" style="background-image:url(<?php echo $logo['url']; ?>)">Logo</a>
+		<a href="/" class="logo">Logo</a>
 		<!-- main navigation -->
 		<?php simple_menu('main'); ?>
 		

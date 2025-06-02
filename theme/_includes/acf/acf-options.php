@@ -23,12 +23,4 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'general_information',
 	]);
 
-	acf_add_options_page(array(
-		'page_title'	=> 'Packages',
-		'menu_title'	=> 'Packages',
-		'menu_slug' 	=> 'packages',
-		'capability'	=> 'edit_pages',
-		'redirect'		=> false
-	));
-
 }
